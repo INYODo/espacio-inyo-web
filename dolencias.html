@@ -123,4 +123,68 @@
             { name: 'Región Lumbar', top: '46%', left: '77%' },
             { name: 'Glúteos', top: '55%', left: '77%' },
             { name: 'Gemelo Derecho', top: '78%', left: '71%' },
-            { name: 'Gemelo Izquierdo', top: '78%', left: '8
+            { name: 'Gemelo Izquierdo', top: '78%', left: '83%' },
+            { name: 'Talón', top: '93%', left: '77%' }
+        ];
+
+        function loadPoints() {
+            container.querySelectorAll('.pain-point').forEach(p => p.remove());
+            pointsConfig.forEach(p => {
+                const dot = document.createElement('div');
+                dot.className = 'pain-point';
+                dot.setAttribute('data-name', p.name);
+                dot.style.top = p.top;
+                dot.style.left = p.left;
+                
+                dot.onclick = () => {
+                    dot.classList.toggle('active');
+                    if(selectedPoints.has(p.name)) selectedPoints.delete(p.name);
+                    else selectedPoints.add(p.name);
+                    updateCounter();
+                };
+                container.appendChild(dot);
+            });
+        }
+
+        function updateCounter() {
+            counter.innerText = `${selectedPoints.size} zonas marcadas`;
+        }
+
+        btnMujer.onclick = () => {
+            currentGender = 'Mujer';
+            bodyImg.src = 'imagen/cuerpo-mujer.png';
+            btnMujer.className = 'px-8 py-2.5 rounded-xl bg-blue-600 text-white font-semibold shadow-md';
+            btnHombre.className = 'px-8 py-2.5 rounded-xl text-slate-500 font-semibold hover:bg-slate-50';
+            limpiar();
+        };
+
+        btnHombre.onclick = () => {
+            currentGender = 'Hombre';
+            bodyImg.src = 'imagen/cuerpo-hombre.png';
+            btnHombre.className = 'px-8 py-2.5 rounded-xl bg-blue-600 text-white font-semibold shadow-md';
+            btnMujer.className = 'px-8 py-2.5 rounded-xl text-slate-500 font-semibold hover:bg-slate-50';
+            limpiar();
+        };
+
+        function limpiar() {
+            selectedPoints.clear();
+            updateCounter();
+            loadPoints();
+        }
+        btnLimpiar.onclick = limpiar;
+
+        btnEnviar.onclick = () => {
+            if(selectedPoints.size === 0) {
+                alert("Por favor, marca al menos una zona.");
+                return;
+            }
+            const lista = Array.from(selectedPoints).join(", ");
+            const texto = `Hola Gastón! Soy paciente de Espacio INYO. Indico mis zonas de dolor (${currentGender}): ${lista}.`;
+            const url = `https://wa.me/5491158580556?text=${encodeURIComponent(texto)}`;
+            window.open(url, '_blank');
+        };
+
+        window.onload = loadPoints;
+    </script>
+</body>
+</html>
