@@ -96,7 +96,7 @@
             { name: 'Rodilla Izquierda', top: '65%', left: '31%' }, { name: 'Tobillo Derecho', top: '82.5%', left: '21%' },
             { name: 'Tobillo Izquierdo', top: '82.5%', left: '30%' },
 
-            // POSTERIOR (Ajustado al 68%)
+            // POSTERIOR (Centrado en 68%)
             { name: 'Nuca', top: '15%', left: '68%' },
             { name: 'Espalda Alta', top: '27%', left: '68%' },
             { name: 'Escápula Derecha', top: '27%', left: '62%' },
@@ -125,6 +125,7 @@
             });
         }
 
+        // Estabilidad en la carga
         bodyImg.onload = loadPoints;
         if (bodyImg.complete) loadPoints();
 
@@ -143,8 +144,10 @@
         btnEnviar.onclick = () => {
             if(selectedPoints.size === 0) { alert("Marca al menos una zona."); return; }
             const texto = `Hola Gastón! Soy paciente de Espacio INYO. Indico mis zonas de dolor (${currentGender}): ${Array.from(selectedPoints).join(", ")}.`;
-            // Número actualizado: 54 11 7619 4825
-            window.open(`https://wa.me/541176194825?text=${encodeURIComponent(texto)}`, '_blank');
+            
+            // EL NÚMERO CORRECTO ES: 541176194825
+            const whatsappUrl = `https://wa.me/541176194825?text=${encodeURIComponent(texto)}`;
+            window.open(whatsappUrl, '_blank');
         };
     </script>
 </body>
