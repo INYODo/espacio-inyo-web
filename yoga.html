@@ -45,28 +45,45 @@
 
     <header class="min-h-screen flex flex-col justify-center items-center text-center p-6 hero-yoga">
         <p class="text-stone-500 text-xs tracking-[0.6em] mb-4 font-bold uppercase">Equilibrio • Fuerza • Flexibilidad</p>
-        <h1 class="text-6xl md:text-9xl font-bold mb-4 tracking-tighter text-stone-900 italic">YOGA INYO</h1>
+        <h1 class="text-6xl md:text-9xl font-bold mb-4 tracking-tighter text-stone-900 italic uppercase">YOGA INYO</h1>
         <div class="w-24 h-px bg-stone-300 mb-8"></div>
-        <p class="text-lg md:text-xl text-stone-600 max-w-2xl mb-12 font-light italic">"Un espacio para reconectar con tu esencia a través del movimiento consciente."</p>
-        <button onclick="document.getElementById('pricing').scrollIntoView({behavior:'smooth'})" class="bg-stone-900 text-white px-12 py-4 uppercase font-bold text-[10px] tracking-widest hover:bg-stone-700 transition shadow-xl">Ver Abonos</button>
+        <p class="text-lg md:text-xl text-stone-600 max-w-2xl mb-12 font-light italic">"Reconecta con tu esencia a través del movimiento consciente en Lanús Oeste."</p>
+        <button onclick="document.getElementById('pricing').scrollIntoView({behavior:'smooth'})" class="bg-stone-900 text-white px-12 py-4 uppercase font-bold text-[10px] tracking-widest hover:bg-stone-700 transition shadow-xl italic">Ver Planes 2026</button>
     </header>
 
     <section class="py-24 px-6 bg-white">
-        <div class="max-w-4xl mx-auto text-center">
-            <h2 class="text-4xl mb-8 italic uppercase font-bold text-stone-900">La Práctica</h2>
-            <p class="text-stone-500 text-lg leading-relaxed mb-12 italic">Nuestras clases de Yoga están diseñadas para todos los niveles, integrando la respiración con posturas que fortalecen el cuerpo y calman la mente, siguiendo la filosofía de bienestar de Espacio INYO.</p>
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="p-6 bg-stone-50 rounded-sm">
-                    <i class="fas fa-wind text-stone-400 text-2xl mb-4"></i>
-                    <h3 class="font-bold mb-2 uppercase text-xs">Respiración</h3>
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-center text-4xl mb-12 italic uppercase font-bold text-stone-900">Nuestra Práctica</h2>
+            <p class="text-stone-600 text-lg leading-relaxed mb-16 italic text-center">En Espacio INYO, el Yoga no es solo ejercicio físico; es una herramienta de <strong>reeducación postural y bienestar mental</strong>. Nuestras clases integran técnicas de respiración (Pranayama), posturas (Asanas) y meditación para un equilibrio total.</p>
+            
+            <div class="grid md:grid-cols-2 gap-12">
+                <div class="flex gap-4 items-start">
+                    <i class="fas fa-check text-stone-900 mt-1"></i>
+                    <div>
+                        <h4 class="font-bold uppercase text-sm mb-2">Salud Postural</h4>
+                        <p class="text-stone-500 text-sm italic">Corrección de hábitos diarios para aliviar dolores crónicos de espalda y cuello.</p>
+                    </div>
                 </div>
-                <div class="p-6 bg-stone-50 rounded-sm">
-                    <i class="fas fa-hand-holding-heart text-stone-400 text-2xl mb-4"></i>
-                    <h3 class="font-bold mb-2 uppercase text-xs">Postura</h3>
+                <div class="flex gap-4 items-start">
+                    <i class="fas fa-check text-stone-900 mt-1"></i>
+                    <div>
+                        <h4 class="font-bold uppercase text-sm mb-2">Flexibilidad Consciente</h4>
+                        <p class="text-stone-500 text-sm italic">Ganancia de rango de movimiento respetando los límites de tu propia biomecánica.</p>
+                    </div>
                 </div>
-                <div class="p-6 bg-stone-50 rounded-sm">
-                    <i class="fas fa-spa text-stone-400 text-2xl mb-4"></i>
-                    <h3 class="font-bold mb-2 uppercase text-xs">Paz Interior</h3>
+                <div class="flex gap-4 items-start">
+                    <i class="fas fa-check text-stone-900 mt-1"></i>
+                    <div>
+                        <h4 class="font-bold uppercase text-sm mb-2">Reducción del Estrés</h4>
+                        <p class="text-stone-500 text-sm italic">Técnicas de relajación que impactan directamente en la calidad del sueño y la calma mental.</p>
+                    </div>
+                </div>
+                <div class="flex gap-4 items-start">
+                    <i class="fas fa-check text-stone-900 mt-1"></i>
+                    <div>
+                        <h4 class="font-bold uppercase text-sm mb-2">Seguimiento INYO</h4>
+                        <p class="text-stone-500 text-sm italic">Atención personalizada del Instructor Gastón Burgos para adaptar cada postura a tu nivel.</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -75,20 +92,30 @@
     <section id="pricing" class="py-24 px-6 bg-[#fdfbf9] border-t border-stone-100">
         <div class="max-w-6xl mx-auto text-center">
             <h2 class="text-5xl mb-16 italic font-bold uppercase tracking-tighter text-stone-900">Abonos Yoga 2026</h2>
-            <div class="grid md:grid-cols-2 gap-12 max-w-3xl mx-auto">
-                <div class="bg-white p-10 border border-stone-100 rounded-sm">
-                    <h3 class="text-stone-400 font-bold mb-4 italic uppercase">Regular</h3>
+            <div class="grid md:grid-cols-2 gap-12 max-w-4xl mx-auto items-stretch">
+                <div class="bg-white p-10 border border-stone-100 rounded-sm flex flex-col">
+                    <h3 class="text-stone-400 font-bold mb-4 italic uppercase">Yoga Regular</h3>
                     <div class="text-5xl font-bold mb-4 italic text-stone-900">$43.000</div>
                     <p class="text-[10px] text-stone-500 font-bold uppercase mb-8 italic">2 veces x semana</p>
-                    <a href="https://wa.me/541176194825" class="block border border-stone-900 py-3 text-[10px] font-bold uppercase tracking-widest hover:bg-stone-900 hover:text-white transition italic">Solicitar Info</a>
+                    <ul class="text-stone-500 text-xs italic space-y-4 mb-10 text-left flex-grow">
+                        <li><i class="fas fa-om text-stone-300 mr-2"></i> Clases de 60 minutos</li>
+                        <li><i class="fas fa-om text-stone-300 mr-2"></i> Enfoque en alineación y base</li>
+                    </ul>
+                    <a href="https://wa.me/541176194825" class="block border border-stone-900 py-3 text-[10px] font-bold uppercase tracking-widest hover:bg-stone-900 hover:text-white transition italic">Solicitar Turno</a>
                 </div>
-                <div class="bg-stone-900 p-10 border border-stone-900 rounded-sm text-white shadow-2xl transform scale-105">
-                    <h3 class="text-stone-400 font-bold mb-4 italic uppercase">Intensivo</h3>
+                <div class="bg-stone-900 p-10 border border-stone-900 rounded-sm text-white shadow-2xl transform scale-105 flex flex-col">
+                    <span class="text-stone-500 font-bold text-[9px] uppercase tracking-widest mb-4 italic">Recomendado</span>
+                    <h3 class="text-stone-400 font-bold mb-4 italic uppercase">Yoga Intensivo</h3>
                     <div class="text-5xl font-bold mb-4 italic">$47.500</div>
                     <p class="text-[10px] text-stone-500 font-bold uppercase mb-8 italic">3 veces x semana</p>
-                    <a href="https://wa.me/541176194825" class="block bg-white text-stone-900 py-3 text-[10px] font-bold uppercase tracking-widest hover:bg-stone-200 transition italic">Reservar</a>
+                    <ul class="text-stone-300 text-xs italic space-y-4 mb-10 text-left flex-grow">
+                        <li><i class="fas fa-om text-stone-600 mr-2"></i> Mayor profundización en la práctica</li>
+                        <li><i class="fas fa-om text-stone-600 mr-2"></i> Rutinas complementarias de respiración</li>
+                    </ul>
+                    <a href="https://wa.me/541176194825" class="block bg-white text-stone-900 py-3 text-[10px] font-bold uppercase tracking-widest hover:bg-stone-200 transition italic">Reservar Mi Lugar</a>
                 </div>
             </div>
+            <p class="mt-12 text-stone-400 text-xs italic">Consultar disponibilidad de horarios presenciales en Lanús.</p>
         </div>
     </section>
 
@@ -100,17 +127,18 @@
                 <p class="text-[10px] uppercase font-bold text-stone-400 italic tracking-widest">WhatsApp: 11 7619-4825</p>
             </div>
             <div class="flex flex-col justify-center items-center md:items-start text-center md:text-left">
-                <p class="text-xs font-bold uppercase tracking-widest text-stone-900 mb-2 italic underline underline-offset-4">Lanús Oeste Centro</p>
+                <p class="text-xs font-bold uppercase tracking-widest text-stone-900 mb-2 italic underline underline-offset-4 italic">Lanús Oeste Centro</p>
                 <p class="text-xs text-stone-500 italic">Gdor. Carlos Tejedor 335.</p>
             </div>
         </div>
         <div class="border-t border-stone-200 pt-16 mt-16">
-            <h3 class="text-[10px] uppercase tracking-[0.6em] text-stone-400 mb-10 font-bold">ECOSISTEMA INYO</h3>
+            <h3 class="text-[10px] uppercase tracking-[0.6em] text-stone-400 mb-10 font-bold italic">ECOSISTEMA INYO</h3>
             <div class="flex flex-wrap justify-center gap-10 italic text-stone-400 text-[10px] font-bold tracking-widest">
                 <a href="https://inyodo.github.io/masaje-japones-/" class="hover:text-stone-900 transition underline underline-offset-8">Masaje Japonés</a>
                 <a href="https://inyodo.github.io/hiit-calistenia/" class="hover:text-stone-900 transition underline underline-offset-8">HIIT Calistenia</a>
                 <a href="https://inyodo.github.io/espacio-inyo-web/artes-marciales.html" class="hover:text-stone-900 transition underline underline-offset-8">Artes Marciales</a>
             </div>
+            <p class="mt-20 text-[9px] text-stone-300 uppercase tracking-widest font-bold">© 2026 Espacio INYO</p>
         </div>
     </footer>
 
