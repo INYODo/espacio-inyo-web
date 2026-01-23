@@ -32,7 +32,10 @@
         .form-input { width: 100%; background-color: #ffffff; border: 1px solid #e2e8f0; border-radius: 0.75rem; padding: 0.6rem; font-size: 0.9rem; margin-top: 0.4rem; outline: none; }
         
         .organ-table { width: 100%; border-collapse: collapse; text-align: left; font-size: 0.85rem; }
-        .organ-table td { padding: 8px; border-bottom: 1px solid #f1f5f9; }
+        .organ-table th { padding: 8px; color: #64748b; font-size: 0.7rem; text-transform: uppercase; border-bottom: 2px solid #e2e8f0; }
+        .organ-table td { padding: 8px; border-bottom: 1px solid #f1f5f9; color: #334155; }
+        .organ-table tr:hover { background-color: #f1f5f9; }
+        input[type="checkbox"] { width: 1.1rem; height: 1.1rem; cursor: pointer; }
     </style>
 </head>
 <body class="bg-slate-50 font-sans antialiased">
@@ -69,7 +72,7 @@
         <div class="space-y-3 mb-6">
             
             <details class="section-card">
-                <summary class="flex justify-between items-center text-slate-700 font-bold italic">COLUMNA VERTEBRAL <span class="text-blue-500">+</span></summary>
+                <summary class="flex justify-between items-center text-slate-700 font-bold italic uppercase text-xs tracking-wider">Columna Vertebral <span class="text-blue-500 text-xl">+</span></summary>
                 <div class="checkbox-group mt-4 p-2 border-t border-slate-200 pt-4">
                     <label class="flex items-center gap-2 text-sm"><input type="checkbox" class="diag" value="Cervical"> Cervical</label>
                     <label class="flex items-center gap-2 text-sm"><input type="checkbox" class="diag" value="Dorsal"> Dorsal</label>
@@ -81,38 +84,52 @@
             </details>
 
             <details class="section-card">
-                <summary class="flex justify-between items-center text-slate-700 font-bold italic">ARTICULACIONES Y MIEMBROS <span class="text-blue-500">+</span></summary>
+                <summary class="flex justify-between items-center text-slate-700 font-bold italic uppercase text-xs tracking-wider">Articulaciones y Miembros <span class="text-blue-500 text-xl">+</span></summary>
                 <div class="checkbox-group mt-4 p-2 border-t border-slate-200 pt-4">
                     <label class="flex items-center gap-2 text-sm font-bold"><input type="checkbox" class="diag" value="Manguito Rotador"> Manguito Rotador</label>
                     <label class="flex items-center gap-2 text-sm"><input type="checkbox" class="diag" value="Codo/Muñeca"> Codo/Muñeca</label>
                     <label class="flex items-center gap-2 text-sm text-rose-600 font-bold"><input type="checkbox" class="diag" value="Trocanteritis"> Trocanteritis</label>
                     <label class="flex items-center gap-2 text-sm"><input type="checkbox" class="diag" value="Meniscos/Ligamentos"> Meniscos/Lig.</label>
                     <label class="flex items-center gap-2 text-sm"><input type="checkbox" class="diag" value="Tobillo/Pie"> Tobillo/Pie</label>
+                    <label class="flex items-center gap-2 text-sm"><input type="checkbox" class="diag" value="Espolón"> Espolón</label>
+                    <label class="flex items-center gap-2 text-sm"><input type="checkbox" class="diag" value="Juanetes"> Juanetes</label>
                 </div>
             </details>
 
             <details class="section-card">
-                <summary class="flex justify-between items-center text-slate-700 font-bold italic">ÓRGANOS Y VÍSCERAS <span class="text-blue-500">+</span></summary>
+                <summary class="flex justify-between items-center text-slate-700 font-bold italic uppercase text-xs tracking-wider">Órganos y Vísceras <span class="text-blue-500 text-xl">+</span></summary>
                 <div class="mt-4 border-t border-slate-200 pt-4 overflow-x-auto">
                     <table class="organ-table">
-                        <thead><tr class="text-[10px] text-slate-400"><th>Órgano</th><th class="text-center">Afec.</th><th class="text-center">Cirug.</th></tr></thead>
+                        <thead>
+                            <tr>
+                                <th>Órgano / Región</th>
+                                <th class="text-center">Afección</th>
+                                <th class="text-center">Cirugía</th>
+                            </tr>
+                        </thead>
                         <tbody>
-                            <tr><td>Mamas/Senos</td><td class="text-center"><input type="checkbox" class="diag" value="Afec-Mamas"></td><td class="text-center"><input type="checkbox" class="diag" value="Cir-Mamas"></td></tr>
-                            <tr><td>Hígado/Vesícula</td><td class="text-center"><input type="checkbox" class="diag" value="Afec-Higado"></td><td class="text-center"><input type="checkbox" class="diag" value="Cir-Higado"></td></tr>
-                            <tr><td>Estómago/Intestinos</td><td class="text-center"><input type="checkbox" class="diag" value="Afec-Digestiva"></td><td class="text-center"><input type="checkbox" class="diag" value="Cir-Digestiva"></td></tr>
-                            <tr><td>Riñones/Tracto Genit.</td><td class="text-center"><input type="checkbox" class="diag" value="Afec-Renal"></td><td class="text-center"><input type="checkbox" class="diag" value="Cir-Renal"></td></tr>
+                            <tr><td>Mamas / Senos</td><td class="text-center"><input type="checkbox" class="diag" value="Afec-Mamas"></td><td class="text-center"><input type="checkbox" class="diag" value="Cir-Mamas"></td></tr>
+                            <tr><td>Corazón (Pericardio)</td><td class="text-center"><input type="checkbox" class="diag" value="Afec-Corazón"></td><td class="text-center"><input type="checkbox" class="diag" value="Cir-Corazón"></td></tr>
+                            <tr><td>Pulmones (Pleura)</td><td class="text-center"><input type="checkbox" class="diag" value="Afec-Pulmón"></td><td class="text-center"><input type="checkbox" class="diag" value="Cir-Pulmón"></td></tr>
+                            <tr><td>Hígado / Vesícula</td><td class="text-center"><input type="checkbox" class="diag" value="Afec-Hígado"></td><td class="text-center"><input type="checkbox" class="diag" value="Cir-Hígado"></td></tr>
+                            <tr><td>Bazo / Páncreas</td><td class="text-center"><input type="checkbox" class="diag" value="Afec-BazoPancreas"></td><td class="text-center"><input type="checkbox" class="diag" value="Cir-BazoPancreas"></td></tr>
+                            <tr><td>Estómago / Peritoneal</td><td class="text-center"><input type="checkbox" class="diag" value="Afec-Estómago"></td><td class="text-center"><input type="checkbox" class="diag" value="Cir-Estómago"></td></tr>
+                            <tr><td>Intestino Delgado</td><td class="text-center"><input type="checkbox" class="diag" value="Afec-IntestDelg"></td><td class="text-center"><input type="checkbox" class="diag" value="Cir-IntestDelg"></td></tr>
+                            <tr><td>Intestino Grueso (Colon)</td><td class="text-center"><input type="checkbox" class="diag" value="Afec-IntestGrueso"></td><td class="text-center"><input type="checkbox" class="diag" value="Cir-IntestGrueso"></td></tr>
+                            <tr><td>Riñones</td><td class="text-center"><input type="checkbox" class="diag" value="Afec-Riñones"></td><td class="text-center"><input type="checkbox" class="diag" value="Cir-Riñones"></td></tr>
+                            <tr><td>Tracto Genitourinario</td><td class="text-center"><input type="checkbox" class="diag" value="Afec-Genitourinario"></td><td class="text-center"><input type="checkbox" class="diag" value="Cir-Genitourinario"></td></tr>
                         </tbody>
                     </table>
                 </div>
             </details>
 
             <details class="section-card">
-                <summary class="flex justify-between items-center text-slate-700 font-bold italic">HÁBITOS Y ESTADO DE SALUD <span class="text-blue-500">+</span></summary>
+                <summary class="flex justify-between items-center text-slate-700 font-bold italic uppercase text-xs tracking-wider">Hábitos y Estado de Salud <span class="text-blue-500 text-xl">+</span></summary>
                 <div class="mt-4 grid grid-cols-1 md:grid-cols-2 gap-4 border-t border-slate-100 pt-4">
                     <label class="flex items-center gap-2 text-sm"><input type="checkbox" class="diag" value="Hipertenso"> Es Hipertenso</label>
-                    <label class="flex items-center gap-2 text-sm text-rose-600 font-bold"><input type="checkbox" class="diag" value="Alergia Contacto"> Alergia (Piel/Contacto)</label>
+                    <label class="flex items-center gap-2 text-sm text-rose-600 font-bold"><input type="checkbox" class="diag" value="Alergia de Contacto"> Alergia (Piel/Contacto)</label>
                     <label class="flex items-center gap-2 text-sm"><input type="checkbox" class="diag" value="Insomnio"> Sufre de Insomnio</label>
-                    <label class="flex items-center gap-2 text-sm"><input type="checkbox" class="diag" value="Activ. Fisica"> Actividad Física Regular</label>
+                    <label class="flex items-center gap-2 text-sm"><input type="checkbox" class="diag" value="Actividad Física"> Actividad Física Regular</label>
                     <div id="divEmbarazo" class="col-span-1 md:col-span-2 border-l-4 border-emerald-400 pl-3 py-1">
                         <label class="flex items-center gap-2 text-sm font-semibold text-emerald-700"><input type="checkbox" class="diag" value="Embarazo"> Gestación / Embarazo</label>
                     </div>
@@ -120,7 +137,7 @@
             </details>
 
             <details class="section-card">
-                <summary class="flex justify-between items-center text-slate-700 font-bold italic">MEDICINAS Y TERAPIAS REALIZADAS <span class="text-blue-500">+</span></summary>
+                <summary class="flex justify-between items-center text-slate-700 font-bold italic uppercase text-xs tracking-wider">Terapias Realizadas <span class="text-blue-500 text-xl">+</span></summary>
                 <div class="checkbox-group mt-4 p-2 border-t border-slate-200 pt-4">
                     <label class="flex items-center gap-2 text-sm"><input type="checkbox" class="diag" value="T-Alopatica"> Alopática</label>
                     <label class="flex items-center gap-2 text-sm"><input type="checkbox" class="diag" value="T-Homeopatica"> Homeopática</label>
@@ -137,7 +154,7 @@
 
         <div class="mt-8 flex flex-col gap-4 max-w-sm mx-auto">
             <button id="btnEnviar" class="w-full bg-emerald-500 text-white py-4 rounded-2xl font-extrabold text-lg shadow-lg hover:bg-emerald-600 active:scale-95 transition-all">Enviar Reporte Integral</button>
-            <button id="btnLimpiar" class="text-slate-400 text-sm font-medium hover:text-rose-500 transition-colors">Borrar selección</button>
+            <button id="btnLimpiar" class="text-slate-400 text-sm font-medium hover:text-rose-500 transition-colors">Limpiar mapa y ficha</button>
         </div>
 
         <div class="mt-12 pt-8 border-t border-slate-200 flex flex-col items-center">
@@ -148,6 +165,7 @@
     </div>
 
     <script>
+        // BLINDAJE DE SEGURIDAD
         document.addEventListener('contextmenu', e => e.preventDefault());
         document.onkeydown = e => { if(e.keyCode == 123 || (e.ctrlKey && e.shiftKey && (e.keyCode == 73 || e.keyCode == 74)) || (e.ctrlKey && e.keyCode == 85)) return false; };
 
@@ -157,14 +175,18 @@
         const btnHombre = document.getElementById('btnHombre');
         const divEmbarazo = document.getElementById('divEmbarazo');
         const btnEnviar = document.getElementById('btnEnviar');
+        const btnLimpiar = document.getElementById('btnLimpiar');
         const qrImg = document.getElementById('qrCode');
+        const txtObs = document.getElementById('txtObs');
 
         let selectedPoints = new Set();
         let currentGender = 'Mujer';
 
+        // QR AUTOMÁTICO
         const currentURL = "https://inyodo.github.io/espacio-inyo-web/dolencias";
         qrImg.src = `https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${encodeURIComponent(currentURL)}&color=1e293b`;
 
+        // LOS 27 PUNTOS EXACTOS DEL CÓDIGO BASE BLINDADO
         const pointsConfig = [
             { name: 'Frente/Cabeza', top: '15.5%', left: '26%' }, { name: 'Cuello', top: '22.5%', left: '25%' },
             { name: 'Hombro Derecho', top: '28%', left: '17%' }, { name: 'Hombro Izquierdo', top: '28%', left: '35.5%' },
@@ -206,17 +228,29 @@
             divEmbarazo.style.display = gender === 'Mujer' ? 'block' : 'none';
             btnMujer.className = gender === 'Mujer' ? 'px-8 py-2.5 rounded-xl bg-blue-600 text-white font-semibold shadow-md' : 'px-8 py-2.5 rounded-xl text-slate-500 font-semibold';
             btnHombre.className = gender === 'Hombre' ? 'px-8 py-2.5 rounded-xl bg-blue-600 text-white font-semibold shadow-md' : 'px-8 py-2.5 rounded-xl text-slate-500 font-semibold';
-            selectedPoints.clear(); loadPoints();
+            limpiarTodo(); // Al cambiar género se limpia para evitar cruce de datos
+        }
+
+        function limpiarTodo() {
+            selectedPoints.clear(); 
+            loadPoints();
+            document.querySelectorAll('.diag').forEach(c => c.checked = false);
+            txtObs.value = "";
+            document.getElementById('pNombre').value = "";
+            document.getElementById('pOcupacion').value = "";
+            document.getElementById('pCel').value = "";
+            document.getElementById('pEmergencia').value = "";
         }
 
         btnMujer.onclick = () => changeGender('Mujer');
         btnHombre.onclick = () => changeGender('Hombre');
+        btnLimpiar.onclick = limpiarTodo;
 
         btnEnviar.onclick = () => {
             const nombre = document.getElementById('pNombre').value;
             const ocupacion = document.getElementById('pOcupacion').value;
             const diags = Array.from(document.querySelectorAll('.diag:checked')).map(c => c.value);
-            const obs = document.getElementById('txtObs').value.trim();
+            const obs = txtObs.value.trim();
             const emergencia = document.getElementById('pEmergencia').value;
             
             let texto = `*FICHA ESPACIO INYO*\n\n👤 *Paciente:* ${nombre || 'No indicado'}\n🛠 *Ocupación:* ${ocupacion || 'No indicado'}\n📍 *Zonas:* ${Array.from(selectedPoints).join(", ") || "Ninguna"}\n📋 *Ficha:* ${diags.join(", ") || "Ninguna"}\n📝 *Obs:* ${obs || "Sin observaciones"}\n🚨 *Emergencia:* ${emergencia || "No indicado"}`;
