@@ -12,7 +12,11 @@
 
     <style>
         /* Renglón 20: Tipografías Patrón INYO */
-        h1, h2, h3, h4, .brand-font { 
+        h1, 
+        h2, 
+        h3, 
+        h4, 
+        .brand-font { 
             font-family: 'Oswald', sans-serif; 
             text-transform: uppercase; 
         }
@@ -24,9 +28,12 @@
             line-height: 1.8; 
         }
         
-        /* Renglón 35: Efectos Visuales Hero */
+        /* Renglón 38: Estilos Visuales del Hero */
         .hero-hiit { 
-            background: linear-gradient(rgba(0,0,0,0.7), rgba(12,10,9,1)), 
+            background: linear-gradient(
+                rgba(0,0,0,0.7), 
+                rgba(12,10,9,1)
+            ), 
             url('https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&w=1470&q=80'); 
             background-size: cover; 
             background-position: center; 
@@ -34,15 +41,21 @@
         }
 
         @keyframes pulse-glow {
-            0%, 100% { text-shadow: 0 0 10px rgba(239, 68, 68, 0.5); opacity: 0.8; }
-            50% { text-shadow: 0 0 25px rgba(239, 68, 68, 1); opacity: 1; }
+            0%, 100% { 
+                text-shadow: 0 0 10px rgba(239, 68, 68, 0.5); 
+                opacity: 0.8; 
+            }
+            50% { 
+                text-shadow: 0 0 25px rgba(239, 68, 68, 1); 
+                opacity: 1; 
+            }
         }
         
         .animate-glow { 
             animation: pulse-glow 3s infinite; 
         }
 
-        /* Renglón 55: Navegación Lateral */
+        /* Renglón 65: Control del Menú Lateral */
         #menu-toggle:checked ~ #side-menu { 
             transform: translateX(0); 
         }
@@ -59,7 +72,7 @@
             height: 400px; 
         }
 
-        /* Renglón 75: Estilos de Pestañas Informativas */
+        /* Renglón 85: Tabs de Impacto */
         .active-tab { 
             border-bottom: 4px solid #ef4444; 
             color: #ef4444; 
@@ -71,9 +84,15 @@
         }
 
         @keyframes pulse-red {
-            0% { box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.7); }
-            70% { box-shadow: 0 0 0 15px rgba(239, 68, 68, 0); }
-            100% { box-shadow: 0 0 0 0 rgba(239, 68, 68, 0); }
+            0% { 
+                box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.7); 
+            }
+            70% { 
+                box-shadow: 0 0 0 15px rgba(239, 68, 68, 0); 
+            }
+            100% { 
+                box-shadow: 0 0 0 0 rgba(239, 68, 68, 0); 
+            }
         }
         
         .animate-pulse-red { 
@@ -99,6 +118,7 @@
     </audio>
 
     <input type="checkbox" id="menu-toggle" class="hidden">
+    
     <label for="menu-toggle" class="fixed top-6 left-6 z-50 cursor-pointer bg-white/10 backdrop-blur-md p-3 rounded-sm border border-white/10 hover:bg-red-600 transition duration-300 text-white">
         <div class="w-6 h-0.5 bg-current mb-1.5 transition"></div>
         <div class="w-6 h-0.5 bg-current mb-1.5 transition"></div>
@@ -108,6 +128,7 @@
     <label id="menu-overlay" for="menu-toggle" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-40 hidden"></label>
 
     <nav id="side-menu" class="fixed top-0 left-0 h-full w-72 bg-[#0c0a09] z-50 shadow-2xl transform -translate-x-full transition-transform duration-300 ease-in-out p-12 flex flex-col border-r border-white/5">
+        
         <label for="menu-toggle" class="absolute top-6 right-6 cursor-pointer text-stone-500 text-xl">
             <i class="fas fa-times"></i>
         </label>
@@ -116,57 +137,106 @@
             <p class="text-[10px] uppercase tracking-[0.3em] text-red-600 mb-8 font-bold border-b border-white/5 pb-2">
                 Espacio INYO ☯️
             </p>
+            
             <ul class="space-y-8 text-sm uppercase tracking-widest font-semibold text-white">
-                <li><a href="https://inyodo.github.io/masaje-japones-/" class="hover:text-red-500 transition">Masaje Japonés</a></li>
-                <li><a href="#" class="text-red-600 font-bold underline underline-offset-8">HIIT Calistenia</a></li>
-                <li><a href="https://inyodo.github.io/espacio-inyo-web/yoga.html" class="hover:text-red-500 transition">Clases de Yoga</a></li>
-                <li><a href="https://inyodo.github.io/espacio-inyo-web/zen-stretching.html" class="hover:text-red-500 transition">Zen Stretching</a></li>
-                <li><a href="https://inyodo.github.io/chamanismo/" class="hover:text-red-500 transition">Chamanismo</a></li>
-                <li><a href="https://inyodo.github.io/Qigong/" class="hover:text-red-500 transition">Qigong</a></li>
-                <li><a href="https://inyodo.github.io/espacio-inyo-web/artes-marciales.html" class="hover:text-red-500 transition">Artes Marciales</a></li>
+                <li>
+                    <a href="https://inyodo.github.io/masaje-japones-/" class="hover:text-red-500 transition">
+                        Masaje Japonés
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="text-red-600 font-bold underline underline-offset-8">
+                        HIIT Calistenia
+                    </a>
+                </li>
+                <li>
+                    <a href="https://inyodo.github.io/espacio-inyo-web/yoga.html" class="hover:text-red-500 transition">
+                        Clases de Yoga
+                    </a>
+                </li>
+                <li>
+                    <a href="https://inyodo.github.io/espacio-inyo-web/zen-stretching.html" class="hover:text-red-500 transition">
+                        Zen Stretching
+                    </a>
+                </li>
+                <li>
+                    <a href="https://inyodo.github.io/chamanismo/" class="hover:text-red-500 transition">
+                        Chamanismo
+                    </a>
+                </li>
+                <li>
+                    <a href="https://inyodo.github.io/Qigong/" class="hover:text-red-500 transition">
+                        Qigong
+                    </a>
+                </li>
+                <li>
+                    <a href="https://inyodo.github.io/espacio-inyo-web/artes-marciales.html" class="hover:text-red-500 transition">
+                        Artes Marciales
+                    </a>
+                </li>
             </ul>
         </div>
     </nav>
 
     <header class="min-h-screen flex flex-col justify-center items-center text-center p-6 hero-hiit relative overflow-hidden text-white">
+        
         <div class="z-10 fade-in visible">
+            
             <p class="text-red-600 text-sm tracking-[0.5em] mb-4 font-bold uppercase italic animate-glow">
                 High Intensity Interval Training
             </p>
+            
             <h1 class="text-6xl md:text-9xl font-bold mb-4 tracking-tighter italic uppercase leading-none">
                 HIIT +<br>CALISTENIA
             </h1>
+            
             <h2 class="text-3xl md:text-5xl text-stone-300 font-light mb-8 italic uppercase tracking-widest">
                 Despierta tu poder
             </h2>
+            
             <div class="w-32 h-1 bg-red-600 mx-auto my-8"></div>
+            
             <p class="text-xl md:text-2xl text-stone-400 max-w-3xl mx-auto font-light italic leading-relaxed">
                 "Ciencia, Biomecánica y Máximo Rendimiento. Domina tu cuerpo, transforma tu vida."
             </p>
+            
             <button onclick="document.getElementById('formula').scrollIntoView({behavior:'smooth'})" class="mt-12 bg-red-600 text-white px-12 py-5 uppercase font-bold text-[10px] tracking-widest hover:bg-red-700 transition shadow-2xl italic">
                 Descubrir Método
             </button>
+            
         </div>
+        
     </header>
 
     <section id="formula" class="py-24 bg-white text-stone-900">
+        
         <div class="container mx-auto px-4">
+            
             <div class="text-center mb-16">
-                <h2 class="text-5xl font-bold mb-4">¿POR QUÉ ESTA FÓRMULA?</h2>
+                
+                <h2 class="text-5xl font-bold mb-4 italic">
+                    ¿POR QUÉ ESTA FÓRMULA?
+                </h2>
+                
                 <p class="text-xl text-stone-600 max-w-3xl mx-auto italic leading-relaxed">
                     Analizamos por qué la combinación de HIIT y Calistenia genera resultados superiores comparados con métodos tradicionales. Una sinergia diseñada para eficiencia y potencia.
                 </p>
+                
             </div>
 
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                
                 <div class="space-y-10">
+                    
                     <div class="flex items-start gap-5">
                         <div class="bg-red-100 p-5 rounded-xl text-red-600 shadow-sm">
                             <i class="fa-solid fa-fire text-4xl"></i>
                         </div>
                         <div>
                             <h3 class="text-3xl mb-2 font-bold uppercase italic">HIIT</h3>
-                            <p class="text-lg text-stone-600 italic">Máxima quema de grasa y aceleración metabólica en tiempo récord mediante el efecto EPOC.</p>
+                            <p class="text-lg text-stone-600 italic">
+                                Máxima quema de grasa y aceleración metabólica en tiempo récord mediante el efecto EPOC.
+                            </p>
                         </div>
                     </div>
 
@@ -176,16 +246,21 @@
                         </div>
                         <div>
                             <h3 class="text-3xl mb-2 font-bold uppercase italic">CALISTENIA</h3>
-                            <p class="text-lg text-stone-600 italic">Construye fuerza funcional, reordena tus patrones de movimiento y fortalece tu estructura ósea.</p>
+                            <p class="text-lg text-stone-600 italic">
+                                Construye fuerza funcional, reordena tus patrones de movimiento y fortalece tu estructura ósea.
+                            </p>
                         </div>
                     </div>
 
                     <div class="bg-[#0c0a09] text-white p-10 rounded-2xl shadow-2xl border-l-8 border-red-600">
-                        <h3 class="text-red-500 text-4xl mb-3 font-bold italic uppercase">RESULTADOS 3X</h3>
+                        <h3 class="text-red-500 text-4xl mb-3 font-bold italic uppercase">
+                            RESULTADOS 3X
+                        </h3>
                         <p class="text-xl italic leading-relaxed">
                             La combinación más eficiente para tonificar, ganar resistencia cardiovascular y mejorar tu salud integral de forma definitiva.
                         </p>
                     </div>
+                    
                 </div>
 
                 <div class="flex justify-center items-center">
@@ -193,15 +268,22 @@
                         <canvas id="formulaChart"></canvas>
                     </div>
                 </div>
+                
             </div>
+            
         </div>
+        
     </section>
 
     <section id="impacto-total" class="py-24 bg-stone-100 text-stone-900">
+        
         <div class="container mx-auto px-4">
+            
             <div class="text-center mb-12">
                 <h2 class="text-5xl font-bold mb-4 italic">IMPACTO TOTAL</h2>
-                <p class="text-xl text-stone-600 italic">Explora cómo transformamos tu cuerpo y tu mente a través de la ciencia del entrenamiento.</p>
+                <p class="text-xl text-stone-600 italic font-light">
+                    Explora cómo transformamos tu cuerpo y tu mente a través de la ciencia del entrenamiento.
+                </p>
             </div>
 
             <div class="flex justify-center mb-10 border-b-2 border-stone-200 max-w-md mx-auto">
@@ -215,20 +297,29 @@
 
             <div class="max-w-5xl mx-auto bg-white rounded-3xl shadow-xl p-12 min-h-[400px] transition-all duration-500" id="benefit-content">
                 </div>
+            
         </div>
+        
     </section>
 
     <section id="metodo-fases" class="py-24 bg-white text-stone-900 border-y border-stone-200">
+        
         <div class="container mx-auto px-4 max-w-4xl">
-            <h2 class="text-5xl text-center font-bold mb-20 italic">EL MÉTODO EN 3 FASES</h2>
+            
+            <h2 class="text-5xl text-center font-bold mb-20 italic uppercase">
+                EL MÉTODO EN 3 FASES
+            </h2>
             
             <div class="relative">
+                
                 <div class="absolute left-8 md:left-1/2 top-0 bottom-0 w-1 bg-stone-200 transform md:-translate-x-1/2"></div>
 
                 <div class="relative flex flex-col md:flex-row items-center mb-20">
                     <div class="flex-1 md:text-right md:pr-16 pl-20 md:pl-0">
                         <h3 class="text-3xl text-red-600 font-bold italic mb-2">1. INICIAL (CONEXIÓN)</h3>
-                        <p class="text-lg text-stone-600 italic">Acondicionamiento neuro-muscular, calentamiento dinámico y movilidad balística.</p>
+                        <p class="text-lg text-stone-600 italic">
+                            Acondicionamiento neuro-muscular, calentamiento dinámico y movilidad balística.
+                        </p>
                     </div>
                     <div class="absolute left-2 md:left-1/2 w-14 h-14 bg-[#0c0a09] rounded-full border-4 border-white z-10 flex items-center justify-center text-white font-bold transform md:-translate-x-1/2 shadow-lg">
                         1
@@ -243,30 +334,45 @@
                     </div>
                     <div class="flex-1 pl-20 md:pl-16">
                         <h3 class="text-3xl text-red-600 font-bold italic mb-2 uppercase">2. TÉCNICA + HIIT</h3>
-                        <p class="text-lg text-stone-600 italic">Ejercicios progresivos de calistenia y fases de máxima exigencia metabólica.</p>
+                        <p class="text-lg text-stone-600 italic">
+                            Ejercicios progresivos de calistenia y fases de máxima exigencia metabólica.
+                        </p>
                     </div>
                 </div>
 
                 <div class="relative flex flex-col md:flex-row items-center">
                     <div class="flex-1 md:text-right md:pr-16 pl-20 md:pl-0">
                         <h3 class="text-3xl text-red-600 font-bold italic mb-2 uppercase">3. FINAL (STRETCHING)</h3>
-                        <p class="text-lg text-stone-600 italic">Estiramientos estáticos profundos y recuperación de fibra muscular con elementos.</p>
+                        <p class="text-lg text-stone-600 italic">
+                            Estiramientos estáticos profundos y recuperación de fibra muscular con elementos.
+                        </p>
                     </div>
                     <div class="absolute left-2 md:left-1/2 w-14 h-14 bg-[#0c0a09] rounded-full border-4 border-white z-10 flex items-center justify-center text-white font-bold transform md:-translate-x-1/2 shadow-lg">
                         3
                     </div>
                     <div class="flex-1 hidden md:block"></div>
                 </div>
+                
             </div>
+            
         </div>
+        
     </section>
 
-    <section id="simulador" class="py-24 bg-stone-100 italic">
-        <div class="container mx-auto px-4 max-w-4xl text-stone-900">
-            <h2 class="text-5xl text-center mb-4 font-bold uppercase italic">Asistente de Rutina Express ✨</h2>
-            <p class="text-center text-stone-500 mb-12 italic">Personalización basada en el método Gastón Burgos</p>
+    <section id="simulador" class="py-24 bg-stone-100 italic text-stone-900">
+        
+        <div class="container mx-auto px-4 max-w-4xl">
+            
+            <h2 class="text-5xl text-center mb-4 font-bold uppercase italic">
+                Asistente de Rutina Express ✨
+            </h2>
+            
+            <p class="text-center text-stone-500 mb-12 italic">
+                Personalización basada en el método Gastón Burgos
+            </p>
             
             <div class="bg-white p-10 rounded-3xl shadow-2xl border border-stone-200">
+                
                 <div class="grid md:grid-cols-3 gap-8 mb-10">
                     <div class="flex flex-col">
                         <label class="text-[10px] font-bold uppercase text-stone-400 mb-2">Duración</label>
@@ -276,6 +382,7 @@
                             <option value="45">45 Minutos</option>
                         </select>
                     </div>
+                    
                     <div class="flex flex-col">
                         <label class="text-[10px] font-bold uppercase text-stone-400 mb-2">Material</label>
                         <select id="input-equip" class="p-4 border border-stone-300 rounded-sm bg-stone-50 font-bold text-sm">
@@ -283,6 +390,7 @@
                             <option value="barra">Barra / Pared</option>
                         </select>
                     </div>
+                    
                     <div class="flex flex-col">
                         <label class="text-[10px] font-bold uppercase text-stone-400 mb-2">Foco</label>
                         <select id="input-focus" class="p-4 border border-stone-300 rounded-sm bg-stone-50 font-bold text-sm">
@@ -297,138 +405,183 @@
                 </button>
 
                 <div id="routine-output" class="hidden mt-12 p-10 bg-stone-50 border-l-8 border-red-600 shadow-inner">
-                    <div id="routine-content" class="space-y-10">
-                        </div>
+                    <div id="routine-content" class="space-y-10"></div>
                 </div>
+                
             </div>
+            
         </div>
+        
     </section>
 
     <section id="packs-horarios" class="py-24 bg-[#0c0a09] text-white italic">
+        
         <div class="container mx-auto px-4 max-w-6xl">
-            <h2 class="text-5xl text-center mb-20 font-bold uppercase italic tracking-tighter">Modalidades y Grilla</h2>
+            
+            <h2 class="text-5xl text-center mb-20 font-bold uppercase italic tracking-tighter">
+                Modalidades y Grilla
+            </h2>
             
             <div class="border-l-4 border-red-600 pl-10 mb-24">
-                <h3 class="text-4xl font-bold mb-6 italic uppercase">Entrenamiento Presencial</h3>
+                
+                <h3 class="text-4xl font-bold mb-6 italic uppercase">
+                    Entrenamiento Presencial
+                </h3>
+                
                 <p class="text-stone-400 text-xl mb-12 italic font-light">
-                    Sede Lanús Oeste Centro. La corrección biomecánica directa garantiza la efectividad de cada intervalo y la seguridad de tu estructura.
+                    Sede Lanús Oeste Centro. La corrección biomecánica directa garantiza la efectividad de cada intervalo.
                 </p>
+                
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    
                     <div class="bg-white/5 border border-white/10 p-8 text-center rounded-sm">
-                        <p class="text-stone-500 text-[10px] uppercase font-bold mb-2">Lunes - Miércoles - Viernes</p>
-                        <p class="text-red-600 text-2xl font-bold italic">08:30 HS</p>
+                        <p class="text-stone-500 text-[10px] uppercase font-bold mb-2 italic">Lun - Mié - Vie</p>
+                        <p class="text-red-600 text-2xl font-bold italic uppercase">08:30 HS</p>
                     </div>
+                    
                     <div class="bg-white/5 border border-white/10 p-8 text-center rounded-sm">
-                        <p class="text-stone-500 text-[10px] uppercase font-bold mb-2">Lunes - Martes - Jueves</p>
-                        <p class="text-red-600 text-2xl font-bold italic">18:00 HS</p>
+                        <p class="text-stone-500 text-[10px] uppercase font-bold mb-2 italic">Lun - Mar - Jue</p>
+                        <p class="text-red-600 text-2xl font-bold italic uppercase">18:00 HS</p>
                     </div>
+                    
                     <div class="bg-white/5 border border-white/10 p-8 text-center rounded-sm">
-                        <p class="text-stone-500 text-[10px] uppercase font-bold mb-2">Miércoles - Viernes</p>
-                        <p class="text-red-600 text-2xl font-bold italic">19:00 HS</p>
+                        <p class="text-stone-500 text-[10px] uppercase font-bold mb-2 italic">Miércoles - Viernes</p>
+                        <p class="text-red-600 text-2xl font-bold italic uppercase">19:00 HS</p>
                     </div>
+                    
                 </div>
+                
             </div>
 
-            <h2 class="text-5xl text-center mb-20 font-bold uppercase italic tracking-tighter">Planes Febrero 2026</h2>
-            <div class="grid md:grid-cols-3 gap-10 items-stretch">
+            <h2 class="text-5xl text-center mb-20 font-bold uppercase italic tracking-tighter">
+                Planes Febrero 2026
+            </h2>
+            
+            <div class="grid md:grid-cols-3 gap-10 items-stretch italic">
+                
                 <div class="p-10 border border-white/10 bg-white/5 flex flex-col hover:border-red-600/30 transition-all">
-                    <h3 class="text-stone-500 font-bold mb-4 uppercase text-xs">Plan Core (2X)</h3>
-                    <div class="text-5xl font-bold mb-4">$50.000</div>
-                    <p class="text-red-600 text-[11px] font-bold uppercase mb-10">2 veces por semana</p>
+                    <h3 class="text-stone-500 font-bold mb-4 uppercase text-xs italic">Plan Core (2X)</h3>
+                    <div class="text-5xl font-bold mb-4 italic">$50.000</div>
+                    <p class="text-red-600 text-[11px] font-bold uppercase mb-10 italic">2 veces por semana</p>
                     <ul class="text-xs space-y-5 mb-12 flex-grow text-stone-400 italic font-light">
                         <li>• Entrenamiento Presencial Supervisado</li>
                         <li>• <strong>BONO:</strong> 1 Clase Mensual Zen Stretching</li>
                     </ul>
-                    <a href="https://wa.me/541176194825" class="block border border-red-900 py-4 text-center text-xs font-bold uppercase hover:bg-red-900 transition">Inscribirme</a>
+                    <a href="https://wa.me/541176194825" class="block border border-red-900 py-4 text-center text-xs font-bold uppercase hover:bg-red-900 transition italic">
+                        Inscribirme
+                    </a>
                 </div>
 
-                <div class="p-10 border-4 border-red-600 bg-red-600/5 shadow-2xl flex flex-col relative transform scale-105 z-10">
-                    <div class="absolute -top-5 left-1/2 transform -translate-x-1/2 bg-red-600 px-6 py-1 text-[10px] font-bold uppercase italic shadow-lg">MÁS ELEGIDO</div>
-                    <h3 class="text-white font-bold mb-4 uppercase text-xs">Plan Power (3X)</h3>
-                    <div class="text-6xl font-bold mb-4">$55.000</div>
-                    <p class="text-red-500 text-[11px] font-bold uppercase mb-10">3 veces por semana</p>
-                    <ul class="text-xs space-y-5 mb-12 flex-grow font-semibold italic">
+                <div class="p-10 border-4 border-red-600 bg-red-600/5 shadow-2xl flex flex-col relative transform scale-105 z-10 italic">
+                    <div class="absolute -top-5 left-1/2 transform -translate-x-1/2 bg-red-600 px-6 py-1 text-[10px] font-bold uppercase italic">
+                        MÁS ELEGIDO
+                    </div>
+                    <h3 class="text-white font-bold mb-4 uppercase text-xs italic">Plan Power (3X)</h3>
+                    <div class="text-6xl font-bold mb-4 italic">$55.000</div>
+                    <p class="text-red-500 text-[11px] font-bold uppercase mb-10 italic">3 veces por semana</p>
+                    <ul class="text-xs space-y-5 mb-12 flex-grow font-semibold italic text-white">
                         <li>• Entrenamiento de Alta Intensidad</li>
-                        <li>• <strong>BONO:</strong> 1 Clase Mensual Zen Stretching</li>
+                        <li>• 1 Clase Mensual Zen Stretching</li>
                         <li>• Seguimiento de Resultados</li>
                     </ul>
-                    <a href="https://wa.me/541176194825" class="block bg-red-600 text-white py-5 text-center text-xs font-bold uppercase hover:bg-red-700 transition shadow-lg shadow-red-600/20">Elegir Plan</a>
+                    <a href="https://wa.me/541176194825" class="block bg-red-600 text-white py-5 text-center text-xs font-bold uppercase hover:bg-red-700 transition shadow-lg italic">
+                        Elegir Plan
+                    </a>
                 </div>
 
                 <div class="p-10 border border-white/10 bg-white/5 flex flex-col hover:border-red-600/30 transition-all">
-                    <h3 class="text-stone-500 font-bold mb-4 uppercase text-xs">Plan Pro Elite (5X)</h3>
-                    <div class="text-5xl font-bold mb-4">$75.000</div>
-                    <p class="text-red-600 text-[11px] font-bold uppercase mb-10">5 veces por semana</p>
+                    <h3 class="text-stone-500 font-bold mb-4 uppercase text-xs italic">Plan Pro Elite (5X)</h3>
+                    <div class="text-5xl font-bold mb-4 italic">$75.000</div>
+                    <p class="text-red-600 text-[11px] font-bold uppercase mb-10 italic">5 veces por semana</p>
                     <ul class="text-xs space-y-5 mb-12 flex-grow text-stone-400 italic font-light">
                         <li>• Modalidad Híbrida: Seguimiento 24/7</li>
-                        <li>• <strong>BONO:</strong> 2 Clases Mensuales Zen Stretching</li>
+                        <li>• 2 Clases Mensuales Zen Stretching</li>
                     </ul>
-                    <a href="https://wa.me/541176194825" class="block border border-red-900 py-4 text-center text-xs font-bold uppercase hover:bg-red-900 transition">Inscribirme</a>
+                    <a href="https://wa.me/541176194825" class="block border border-red-900 py-4 text-center text-xs font-bold uppercase hover:bg-red-900 transition italic">
+                        Inscribirme
+                    </a>
                 </div>
+                
             </div>
-            <p class="text-center mt-16 text-stone-600 text-xs font-bold uppercase tracking-[0.4em]">Clase Prueba: $17.000</p>
+            
         </div>
+        
     </section>
 
     <section class="py-24 bg-white text-stone-900 italic">
+        
         <div class="container mx-auto px-4 max-w-4xl">
+            
             <div class="flex flex-col md:flex-row items-center gap-16 mb-20 border-b border-stone-200 pb-20">
+                
                 <img src="https://inyodo.github.io/espacio-inyo-web/imagen/IMG_4931.jpeg" class="w-56 h-56 rounded-full border-8 border-stone-100 shadow-2xl object-cover grayscale hover:grayscale-0 transition duration-700">
+                
                 <div class="text-center md:text-left">
                     <h2 class="text-5xl font-bold mb-3 uppercase tracking-tighter">Gastón Burgos</h2>
-                    <h3 class="text-2xl text-red-600 mb-8 uppercase italic font-bold">Instructor en Calistenia & Terapeuta</h3>
+                    <h3 class="text-2xl text-red-600 mb-8 uppercase italic font-bold">Instructor & Terapeuta</h3>
                     <p class="text-xl text-stone-600 italic leading-relaxed font-light">
-                        "Mi objetivo es guiar tu entrenamiento valorando tus posibilidades físicas reales para asesorarte de forma profesional y segura."
+                        "Como instructor y terapeuta, mi objetivo es guiar tu entrenamiento valorando tus posibilidades físicas reales."
                     </p>
                 </div>
+                
             </div>
 
             <div class="space-y-6">
-                <details class="group bg-stone-50 border border-stone-200 rounded-sm overflow-hidden transition-all duration-300">
-                    <summary class="p-8 cursor-pointer font-bold text-xl flex justify-between items-center list-none uppercase hover:bg-stone-100">
-                        <span><i class="fa-solid fa-credit-card mr-6 text-red-600"></i> Pagos y Recargos</span>
-                        <i class="fa-solid fa-chevron-down group-open:rotate-180 transition-transform duration-300"></i>
+                
+                <details class="group bg-stone-50 border border-stone-200 rounded-sm">
+                    <summary class="p-8 cursor-pointer font-bold text-xl flex justify-between items-center list-none uppercase">
+                        <span><i class="fa-solid fa-credit-card mr-6 text-red-600"></i> Pagos</span>
+                        <i class="fa-solid fa-chevron-down group-open:rotate-180 transition"></i>
                     </summary>
-                    <div class="px-8 pb-8 text-stone-600 text-lg leading-relaxed italic border-t border-stone-200 pt-6">
-                        La cuota mensual se abona por adelantado del 1 al 5 de cada mes. Pasada esa fecha, se aplica un recargo del 20% y la vacante podría liberarse automáticamente.
+                    <div class="px-8 pb-8 text-stone-600 text-lg italic border-t pt-6 text-sm leading-relaxed">
+                        Abono del 1 al 5 de cada mes. Se aplica un recargo del 20% si se abona fuera de término y el lugar podría liberarse tras la mora.
                     </div>
                 </details>
 
-                <details class="group bg-stone-50 border border-stone-200 rounded-sm overflow-hidden transition-all duration-300">
-                    <summary class="p-8 cursor-pointer font-bold text-xl flex justify-between items-center list-none uppercase hover:bg-stone-100">
-                        <span><i class="fa-solid fa-rotate-left mr-6 text-red-600"></i> Ausencias y Recuperación</span>
-                        <i class="fa-solid fa-chevron-down group-open:rotate-180 transition-transform duration-300"></i>
+                <details class="group bg-stone-50 border border-stone-200 rounded-sm">
+                    <summary class="p-8 cursor-pointer font-bold text-xl flex justify-between items-center list-none uppercase">
+                        <span><i class="fa-solid fa-rotate-left mr-6 text-red-600"></i> Ausencias</span>
+                        <i class="fa-solid fa-chevron-down group-open:rotate-180 transition"></i>
                     </summary>
-                    <div class="px-8 pb-8 text-stone-600 text-lg leading-relaxed italic border-t border-stone-200 pt-6">
-                        Las inasistencias pueden recuperarse únicamente dentro del mes abonado, previa coordinación de disponibilidad. Las clases no son transferibles al mes siguiente.
+                    <div class="px-8 pb-8 text-stone-600 text-lg italic border-t pt-6 text-sm leading-relaxed">
+                        Puedes recuperar las clases que faltaste únicamente dentro del mes abonado, previa coordinación. No son transferibles al mes siguiente.
                     </div>
                 </details>
+                
             </div>
+            
         </div>
+        
     </section>
 
     <footer class="py-32 bg-black text-center border-t border-white/5 italic">
+        
         <div class="container mx-auto px-4">
-            <h2 class="text-6xl mb-6 uppercase font-bold text-white tracking-tighter">Espacio INYO ☯️</h2>
-            <p class="text-stone-600 text-sm uppercase tracking-[0.6em] mb-24">Lanús Oeste Centro, Argentina.</p>
+            
+            <h2 class="text-6xl mb-6 uppercase font-bold text-white tracking-tighter">
+                Espacio INYO ☯️
+            </h2>
             
             <div class="flex flex-wrap justify-center gap-x-12 gap-y-10 mb-24 text-stone-500 text-[11px] font-bold tracking-[0.2em] uppercase">
-                <a href="https://inyodo.github.io/masaje-japones-/" class="hover:text-red-600 transition underline underline-offset-8 decoration-white/10">Masaje Japonés</a>
-                <a href="https://inyodo.github.io/espacio-inyo-web/yoga.html" class="hover:text-red-600 transition underline underline-offset-8 decoration-white/10">Clases de Yoga</a>
-                <a href="https://inyodo.github.io/espacio-inyo-web/zen-stretching.html" class="hover:text-red-600 transition underline underline-offset-8 decoration-white/10">Zen Stretching</a>
-                <a href="https://inyodo.github.io/chamanismo/" class="hover:text-red-600 transition underline underline-offset-8 decoration-white/10">Chamanismo</a>
-                <a href="https://inyodo.github.io/Qigong/" class="hover:text-red-600 transition underline underline-offset-8 decoration-white/10">Qigong</a>
-                <a href="https://inyodo.github.io/espacio-inyo-web/artes-marciales.html" class="hover:text-red-600 transition underline underline-offset-8 decoration-white/10">Artes Marciales</a>
+                <a href="https://inyodo.github.io/masaje-japones-/" class="hover:text-red-600 underline underline-offset-8">Masaje Japonés</a>
+                <a href="https://inyodo.github.io/espacio-inyo-web/yoga.html" class="hover:text-red-600 underline underline-offset-8">Clases de Yoga</a>
+                <a href="https://inyodo.github.io/espacio-inyo-web/zen-stretching.html" class="hover:text-red-600 underline underline-offset-8">Zen Stretching</a>
+                <a href="https://inyodo.github.io/chamanismo/" class="hover:text-red-600 underline underline-offset-8">Chamanismo</a>
+                <a href="https://inyodo.github.io/Qigong/" class="hover:text-red-600 underline underline-offset-8">Qigong</a>
+                <a href="https://inyodo.github.io/espacio-inyo-web/artes-marciales.html" class="hover:text-red-600 underline underline-offset-8">Artes Marciales</a>
             </div>
             
-            <p class="text-stone-800 text-[9px] uppercase font-bold">© 2026 ESPACIO INYO - Todos los derechos reservados.</p>
+            <p class="text-stone-800 text-[9px] uppercase font-bold">© 2026 ESPACIO INYO</p>
+            
         </div>
+        
     </footer>
 
-    <button onclick="toggleMusic()" id="musicBtn" class="fixed bottom-32 right-10 bg-stone-900 text-white w-16 h-16 rounded-full shadow-2xl flex items-center justify-center text-xl hover:scale-110 transition-all duration-300 z-50 border border-red-600">
+    <button onclick="toggleMusic()" id="musicBtn" class="fixed bottom-32 right-10 bg-stone-900 text-white w-16 h-16 rounded-full shadow-2xl flex items-center justify-center text-xl hover:scale-110 transition z-50 border border-red-600">
         <i id="musicIcon" class="fas fa-volume-mute"></i>
     </button>
-    <a href="https://wa.me/541176194825" class="fixed bottom-10 right-10 bg-[#25d366]/20 backdrop-blur-sm text-white w-16 h-16 rounded-full shadow-2xl flex items-center justify-center text-3xl hover:bg-[#25d366] hover:scale-110 transition-all duration-300 z-50 border border-white/10">
+    
+    <a href="https://wa.me/541176194825" class="fixed bottom-10 right-10 bg-[#25d366]/20 backdrop-blur-sm text-white w-16 h-16 rounded-full shadow-2xl flex items-center justify-center text-3xl hover:bg-[#25d366] transition z-50 border border-white/10">
         <i class="fab fa-whatsapp"></i>
     </a>
 
@@ -437,50 +590,50 @@
         const icon = document.getElementById('musicIcon');
 
         function toggleMusic() {
-            if (music.paused) {
-                music.play().catch(e => console.log("Permisos:", e));
-                icon.classList.replace('fa-volume-mute', 'fa-volume-up');
-                icon.classList.add('text-red-500');
-                document.getElementById('musicBtn').classList.add('animate-pulse-red');
-            } else {
-                music.pause();
-                icon.classList.replace('fa-volume-up', 'fa-volume-mute');
-                icon.classList.remove('text-red-500');
-                document.getElementById('musicBtn').classList.remove('animate-pulse-red');
+            if (music.paused) { 
+                music.play(); 
+                icon.classList.replace('fa-volume-mute', 'fa-volume-up'); 
+                icon.classList.add('text-red-500'); 
+                document.getElementById('musicBtn').classList.add('animate-pulse-red'); 
+            }
+            else { 
+                music.pause(); 
+                icon.classList.replace('fa-volume-up', 'fa-volume-mute'); 
+                icon.classList.remove('text-red-500'); 
+                document.getElementById('musicBtn').classList.remove('animate-pulse-red'); 
             }
         }
 
-        // Pestañas Impacto Total
         const impacts = {
             physical: `
-                <div class="grid md:grid-cols-3 gap-10 animate-fade-in text-left">
-                    <div class="p-8 bg-stone-50 rounded-2xl shadow-sm border border-stone-100">
-                        <h4 class="text-red-600 font-bold text-2xl mb-4 italic">FUERZA SÓLIDA</h4>
-                        <p class="text-stone-600 italic">Desarrolla músculos funcionales y aprende habilidades de calistenia técnica bajo supervisión profesional.</p>
+                <div class="grid md:grid-cols-3 gap-10 animate-fade-in italic">
+                    <div class="p-8 bg-stone-50 border border-stone-100">
+                        <h4 class="text-red-600 font-bold text-2xl mb-4 italic">Fuerza Sólida</h4>
+                        <p class="text-stone-600 italic">Desarrolla músculos funcionales bajo supervisión técnica.</p>
                     </div>
-                    <div class="p-8 bg-stone-50 rounded-2xl shadow-sm border border-stone-100">
-                        <h4 class="text-red-600 font-bold text-2xl mb-4 italic">METABOLISMO 24/7</h4>
-                        <p class="text-stone-600 italic">Maximiza la oxidación de grasas y la aceleración metabólica hasta 48hs después de cada sesión.</p>
+                    <div class="p-8 bg-stone-50 border border-stone-100">
+                        <h4 class="text-red-600 font-bold text-2xl mb-4 italic">Metabolismo</h4>
+                        <p class="text-stone-600 italic">Aceleración metabólica hasta 48hs después de cada sesión.</p>
                     </div>
-                    <div class="p-8 bg-stone-50 rounded-2xl shadow-sm border border-stone-100">
-                        <h4 class="text-red-600 font-bold text-2xl mb-4 italic">VITALIDAD</h4>
-                        <p class="text-stone-600 italic">Mejora drásticamente tu capacidad cardiovascular, respiratoria y tu nivel de energía diaria.</p>
+                    <div class="p-8 bg-stone-50 border border-stone-100">
+                        <h4 class="text-red-600 font-bold text-2xl mb-4 italic">Vitalidad</h4>
+                        <p class="text-stone-600 italic">Mejora drástica de energía diaria y capacidad cardiovascular.</p>
                     </div>
                 </div>
             `,
             mental: `
-                <div class="grid md:grid-cols-3 gap-10 animate-fade-in text-left">
-                    <div class="p-8 bg-stone-50 rounded-2xl shadow-sm border border-stone-100">
-                        <h4 class="text-stone-900 font-bold text-2xl mb-4 italic">CONTROL ESTRÉS</h4>
-                        <p class="text-stone-600 italic">Utiliza la intensidad del HIIT como válvula de escape para las tensiones mentales diarias.</p>
+                <div class="grid md:grid-cols-3 gap-10 animate-fade-in italic">
+                    <div class="p-8 bg-stone-50 border border-stone-100">
+                        <h4 class="text-stone-900 font-bold text-2xl mb-4 italic">Control Estrés</h4>
+                        <p class="text-stone-600 italic">Canalización de tensión mental a través de la intensidad.</p>
                     </div>
-                    <div class="p-8 bg-stone-50 rounded-2xl shadow-sm border border-stone-100">
-                        <h4 class="text-stone-900 font-bold text-2xl mb-4 italic">POSTURA ZEN</h4>
-                        <p class="text-stone-600 italic">Corrige vicios biomecánicos y previene lesiones crónicas mediante el fortalecimiento del Core.</p>
+                    <div class="p-8 bg-stone-50 border border-stone-100">
+                        <h4 class="text-stone-900 font-bold text-2xl mb-4 italic">Postura</h4>
+                        <p class="text-stone-600 italic">Corrección de vicios biomecánicos y fortalecimiento Core.</p>
                     </div>
-                    <div class="p-8 bg-stone-50 rounded-2xl shadow-sm border border-stone-100">
-                        <h4 class="text-stone-900 font-bold text-2xl mb-4 italic">COMUNIDAD</h4>
-                        <p class="text-stone-600 italic">Entrena en un ambiente de apoyo mutuo y respeto, enfocado en la salud integral.</p>
+                    <div class="p-8 bg-stone-50 border border-stone-100">
+                        <h4 class="text-stone-900 font-bold text-2xl mb-4 italic">Comunidad</h4>
+                        <p class="text-stone-600 italic">Ambiente de apoyo mutuo enfocado en la salud integral.</p>
                     </div>
                 </div>
             `
@@ -489,19 +642,114 @@
         function switchBenefit(type) {
             const content = document.getElementById('benefit-content');
             content.style.opacity = '0';
-            setTimeout(() => {
-                content.innerHTML = impacts[type];
-                content.style.opacity = '1';
+            setTimeout(() => { 
+                content.innerHTML = impacts[type]; 
+                content.style.opacity = '1'; 
             }, 300);
-            document.getElementById('btn-physical').className = type === 'physical' ? 'w-1/2 py-5 text-xl font-bold active-tab transition-all uppercase italic' : 'w-1/2 py-5 text-xl font-bold inactive-tab transition-all uppercase italic';
-            document.getElementById('btn-mental').className = type === 'mental' ? 'w-1/2 py-5 text-xl font-bold active-tab transition-all uppercase italic' : 'w-1/2 py-5 text-xl font-bold inactive-tab transition-all uppercase italic';
+            
+            document.getElementById('btn-physical').className = type === 'physical' ? 
+                'w-1/2 py-5 text-xl font-bold active-tab transition-all uppercase italic' : 
+                'w-1/2 py-5 text-xl font-bold inactive-tab transition-all uppercase italic';
+                
+            document.getElementById('btn-mental').className = type === 'mental' ? 
+                'w-1/2 py-5 text-xl font-bold active-tab transition-all uppercase italic' : 
+                'w-1/2 py-5 text-xl font-bold inactive-tab transition-all uppercase italic';
         }
 
-        // Motor del Simulador
-        const ex_warmup = ["Cat-cow", "Knee lifts", "Warmup roll", "Apees skaters", "Bear walk", "Hip circles", "Down dog to cobra", "Inchworms", "Hip raises", "Skipping jumps", "Jumping jacks", "Superman", "Side lunges", "Assisted lunges", "Reverse lunges", "Assisted squats", "Shoulder Warmup", "Standing scales", "Table twists", "High knees"];
-        const ex_work_suelo = ["Squats", "Squat lunges", "Lunges", "Squat reverse lunges", "Cossak squats", "Hip raises", "Leg raises", "Knee wipers", "Leg wipers", "Crunches", "Reverse crunches", "Corkscrew crunches", "Arm & leg lifts", "Inchworms", "Inchworm pushups", "Pushups", "Negative pushups", "Knee pushups", "Plank shoulder taps", "Switch planks", "Planks", "Superman", "Ground superman", "Back extensions", "Diving pushups", "Pikes", "Situps", "Squat jumps", "Split lunges", "Burpees", "Sprawls", "Standups", "Mountain climbers"];
-        const ex_work_extra = ["Pullups", "Archer pullups", "Chinups", "Negative pullups", "Clapping pullups", "Typewritter pullups", "Hanging leg wipers", "Hanging knee raises", "Commando pullups", "One-armed hangs", "Active hang", "Passive hang", "Toes to bar", "Chest-to-bar", "Handstand hold", "Hip taps", "Shoulder taps", "Wall walks", "Wall squats"];
-        const ex_cool = ["Down dog", "Cobra", "Deep squat hold", "World’s greatest stretch", "Triceps stretch", "Hip stretch", "Lat stretch", "Cow face arms", "Shoulder stretch", "Forearms stretch", "Quad stretch"];
+        const ex_warmup = [
+            "Cat-cow", 
+            "Knee lifts", 
+            "Warmup roll", 
+            "Apees skaters", 
+            "Bear walk", 
+            "Hip circles", 
+            "Down dog to cobra", 
+            "Inchworms", 
+            "Hip raises", 
+            "Skipping jumps", 
+            "Jumping jacks", 
+            "Superman", 
+            "Side lunges", 
+            "Assisted lunges", 
+            "Reverse lunges", 
+            "Assisted squats", 
+            "Shoulder Warmup", 
+            "Standing scales", 
+            "Table twists", 
+            "High knees"
+        ];
+        
+        const ex_work_suelo = [
+            "Squats", 
+            "Squat lunges", 
+            "Lunges", 
+            "Squat reverse lunges", 
+            "Cossak squats", 
+            "Hip raises", 
+            "Leg raises", 
+            "Knee wipers", 
+            "Leg wipers", 
+            "Crunches", 
+            "Reverse crunches", 
+            "Corkscrew crunches", 
+            "Arm & leg lifts", 
+            "Inchworms", 
+            "Inchworm pushups", 
+            "Pushups", 
+            "Negative pushups", 
+            "Knee pushups", 
+            "Plank shoulder taps", 
+            "Switch planks", 
+            "Planks", 
+            "Superman", 
+            "Ground superman", 
+            "Back extensions", 
+            "Diving pushups", 
+            "Pikes", 
+            "Situps", 
+            "Squat jumps", 
+            "Split lunges", 
+            "Burpees", 
+            "Sprawls", 
+            "Standups", 
+            "Mountain climbers"
+        ];
+        
+        const ex_work_extra = [
+            "Pullups", 
+            "Archer pullups", 
+            "Chinups", 
+            "Negative pullups", 
+            "Clapping pullups", 
+            "Typewritter pullups", 
+            "Hanging leg wipers", 
+            "Hanging knee raises", 
+            "Commando pullups", 
+            "One-armed hangs", 
+            "Active hang", 
+            "Passive hang", 
+            "Toes to bar", 
+            "Chest-to-bar", 
+            "Handstand hold", 
+            "Hip taps", 
+            "Shoulder taps", 
+            "Wall walks", 
+            "Wall squats"
+        ];
+        
+        const ex_cool = [
+            "Down dog", 
+            "Cobra", 
+            "Deep squat hold", 
+            "World’s greatest stretch", 
+            "Triceps stretch", 
+            "Hip stretch", 
+            "Lat stretch", 
+            "Cow face arms", 
+            "Shoulder stretch", 
+            "Forearms stretch", 
+            "Quad stretch"
+        ];
 
         function generateRoutine() {
             const time = document.getElementById('input-time').value;
@@ -509,28 +757,26 @@
             const output = document.getElementById('routine-output');
             const content = document.getElementById('routine-content');
             output.classList.remove('hidden');
+            
             let numWork = time == "15" ? 4 : time == "30" ? 8 : 12;
             const getR = (a, n) => a.sort(() => 0.5 - Math.random()).slice(0, n);
             let pool = equip === "barra" ? [...ex_work_suelo, ...ex_work_extra] : ex_work_suelo;
             
             content.innerHTML = `
                 <div class="border-l-4 border-red-600 pl-8">
-                    <h4 class="text-stone-900 font-bold text-lg mb-2 uppercase">A. Calentamiento (Movilidad)</h4>
-                    <p class="text-stone-500 text-sm mb-4">Realizar en circuito fluído.</p>
+                    <h4 class="text-stone-900 font-bold text-lg mb-2 uppercase">A. Calentamiento</h4>
                     <ul class="text-stone-700 space-y-2 text-sm">
                         ${getR(ex_warmup, 4).map(ex => `<li>• ${ex}</li>`).join('')}
                     </ul>
                 </div>
                 <div class="border-l-4 border-stone-800 pl-8">
-                    <h4 class="text-stone-900 font-bold text-lg mb-2 uppercase">B. Bloque Principal (Intervalos)</h4>
-                    <p class="text-stone-500 text-sm mb-4">40 Segundos de Acción / 20 de Descanso.</p>
+                    <h4 class="text-stone-900 font-bold text-lg mb-2 uppercase">B. Bloque Principal</h4>
                     <div class="grid md:grid-cols-2 gap-4 text-stone-700 text-sm">
                         ${getR(pool, numWork).map(ex => `<li>• ${ex}</li>`).join('')}
                     </div>
                 </div>
                 <div class="border-l-4 border-red-900 pl-8">
-                    <h4 class="text-stone-900 font-bold text-lg mb-2 uppercase">C. Recuperación (Enfriamiento)</h4>
-                    <p class="text-stone-500 text-sm mb-4">Sostener cada posición 45 segundos.</p>
+                    <h4 class="text-stone-900 font-bold text-lg mb-2 uppercase">C. Recuperación</h4>
                     <ul class="text-stone-700 space-y-2 text-sm">
                         ${getR(ex_cool, 3).map(ex => `<li>• ${ex}</li>`).join('')}
                     </ul>
@@ -539,7 +785,6 @@
             window.scrollTo({ top: document.getElementById('simulador').offsetTop + 100, behavior: 'smooth' });
         }
 
-        // Gráfico de Pentágono
         document.addEventListener('DOMContentLoaded', () => {
             const ctx = document.getElementById('formulaChart').getContext('2d');
             new Chart(ctx, {
@@ -554,7 +799,7 @@
                         borderWidth: 3,
                         pointBackgroundColor: '#ef4444'
                     }, {
-                        label: 'Tradicional',
+                        label: 'Gimnasio Tradicional',
                         data: [80, 50, 40, 60, 50],
                         backgroundColor: 'rgba(0,0,0,0.05)',
                         borderColor: 'rgba(0,0,0,0.2)',
@@ -562,23 +807,35 @@
                     }]
                 },
                 options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
                     scales: {
                         r: {
                             angleLines: { color: 'rgba(0,0,0,0.1)' },
                             grid: { color: 'rgba(0,0,0,0.1)' },
                             pointLabels: { color: '#444', font: { size: 14, weight: 'bold', family: 'Oswald' } },
-                            ticks: { display: false, max: 100 }
+                            suggestedMin: 0,
+                            suggestedMax: 100,
+                            ticks: { display: false }
                         }
                     },
-                    plugins: { legend: { display: false } }
+                    plugins: {
+                        legend: {
+                            display: true,
+                            position: 'top',
+                            labels: { font: { family: 'Oswald', size: 12 }, color: '#444', usePointStyle: true, padding: 20 }
+                        },
+                        tooltip: { enabled: true }
+                    }
                 }
             });
             switchBenefit('physical');
         });
-
-        const obs = new IntersectionObserver((es) => {
-            es.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+        
+        const obs = new IntersectionObserver((es) => { 
+            es.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); }); 
         }, { threshold: 0.1 });
+        
         document.querySelectorAll('.fade-in').forEach(e => obs.observe(e));
     </script>
 </body>
