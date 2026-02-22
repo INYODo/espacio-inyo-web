@@ -18,12 +18,13 @@
         #menu-toggle:checked ~ #side-menu { transform: translateX(0); }
         #menu-toggle:checked ~ #menu-overlay { display: block; }
 
-        /* Estilo Botón Música Yoga */
         @keyframes pulse-yoga {
             0% { box-shadow: 0 0 0 0 rgba(153, 27, 27, 0.4); }
             70% { box-shadow: 0 0 0 15px rgba(153, 27, 27, 0); }
             100% { box-shadow: 0 0 0 0 rgba(153, 27, 27, 0); }
         }
+        .hover-lift { transition: all 0.3s ease; }
+        .hover-lift:hover { transform: translateY(-5px); }
     </style>
 </head>
 <body class="antialiased">
@@ -130,7 +131,7 @@
     <section id="pricing" class="py-24 px-6 bg-[#fdfbf9] border-t border-stone-100">
         <div class="max-w-6xl mx-auto">
             <h2 class="text-center text-5xl mb-16 italic uppercase font-bold tracking-tighter text-stone-900">Inversión Yoga Marzo</h2>
-            <div class="grid md:grid-cols-3 gap-8 items-stretch mb-16 italic">
+            <div class="grid md:grid-cols-3 gap-8 items-stretch mb-16 italic text-stone-900">
                 <div class="bg-white p-10 border border-stone-100 flex flex-col shadow-sm">
                     <h3 class="text-stone-400 font-bold mb-4 uppercase text-xs italic">1 Vez x Semana</h3>
                     <div class="text-5xl font-bold mb-2 text-stone-900 italic">$48.000</div>
@@ -139,36 +140,42 @@
                 </div>
                 <div class="bg-stone-900 p-10 border border-stone-900 text-white shadow-2xl transform scale-105 flex flex-col">
                     <span class="text-stone-500 font-bold text-[9px] uppercase tracking-widest mb-4 italic">Sugerido</span>
-                    <h3 class="text-stone-400 font-bold mb-4 uppercase text-xs italic text-stone-400">2 Veces x Semana</h3>
+                    <h3 class="text-stone-400 font-bold mb-4 uppercase text-xs italic">2 Veces x Semana</h3>
                     <div class="text-6xl font-bold mb-2 italic text-white">$62.000</div>
                     <p class="text-[10px] text-stone-500 font-bold uppercase mb-8 italic">8 clases mensuales</p>
-                    <a href="https://wa.me/541176194825" class="mt-auto block bg-white text-stone-900 py-3 text-[10px] font-bold uppercase tracking-widest text-center hover:bg-stone-200 transition italic text-stone-900">Reservar</a>
+                    <a href="https://wa.me/541176194825" class="mt-auto block bg-white text-stone-900 py-3 text-[10px] font-bold uppercase tracking-widest text-center hover:bg-stone-200 transition italic">Reservar</a>
                 </div>
-                <div class="bg-white p-10 border border-stone-100 flex flex-col shadow-sm">
+                <div class="bg-white p-10 border border-stone-100 flex flex-col shadow-sm text-stone-900">
                     <h3 class="text-stone-400 font-bold mb-4 uppercase text-xs italic">3 Veces x Semana</h3>
                     <div class="text-5xl font-bold mb-2 text-stone-900 italic">$84.000</div>
                     <p class="text-[10px] text-stone-400 font-bold uppercase mb-8 italic">12 clases mensuales</p>
-                    <a href="https://wa.me/541176194825" class="mt-auto block border border-stone-900 py-3 text-[10px] font-bold uppercase tracking-widest text-center hover:bg-stone-900 hover:text-white transition italic text-stone-900">Solicitar</a>
+                    <a href="https://wa.me/541176194825" class="mt-auto block border border-stone-900 py-3 text-[10px] font-bold uppercase tracking-widest text-center hover:bg-stone-900 hover:text-white transition italic">Solicitar</a>
                 </div>
             </div>
 
-            <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-8 italic">
+            <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-8 italic">
                 <div class="bg-white p-8 border-l-4 border-stone-900 shadow-sm">
                     <h4 class="font-bold uppercase text-xs mb-4 tracking-widest italic text-stone-900">Políticas & Clase Suelta</h4>
-                    <ul class="text-[11px] text-stone-500 space-y-3 italic text-stone-500">
+                    <ul class="text-[11px] text-stone-500 space-y-3 italic">
                         <li>• El mes se abona hasta el <strong>día 10 inclusive</strong>.</li>
                         <li>• Recargo del 10% abonando fuera de término.</li>
                         <li>• <strong>Clase suelta: $18.000</strong>.</li>
                         <li>• No se pueden combinar clases con diferentes profes.</li>
                     </ul>
                 </div>
-                <div class="bg-stone-900 p-8 text-white shadow-xl italic">
-                    <h4 class="font-bold uppercase text-xs mb-4 tracking-widest text-stone-400 underline underline-offset-4 decoration-stone-700 italic">Bonificación INYO ☯️</h4>
-                    <p class="text-[11px] leading-relaxed mb-4 italic text-stone-300">
-                        • Pack 1x y 2x semanal: Incluye <strong>1 Clase Mensual</strong> de Zen Stretching.<br>
-                        • Pack 3x semanal: Incluye <strong>2 Clases Mensuales</strong> de Zen Stretching.
-                    </p>
-                    <p class="text-[9px] text-stone-500 uppercase font-bold italic">* No acumulable en meses posteriores. Válido dentro del mes abonado.</p>
+                <div class="relative group overflow-hidden bg-stone-900 p-8 text-white shadow-xl italic cursor-pointer" onclick="document.getElementById('promo-detail').classList.toggle('hidden')">
+                    <img src="imagen/dojo-clean.png" class="absolute inset-0 w-full h-full object-cover opacity-20 group-hover:scale-110 transition-transform duration-700">
+                    <div class="relative z-10">
+                        <h4 class="font-bold uppercase text-xs mb-4 tracking-widest text-red-500 italic">Bonificación INYO ☯️ (Click para ver)</h4>
+                        <p class="text-[11px] leading-relaxed mb-4 italic text-stone-300">
+                            • Pack 1x y 2x semanal: Incluye <strong>1 Clase Mensual</strong> de Zen Stretching.<br>
+                            • Pack 3x semanal: Incluye <strong>2 Clases Mensuales</strong> de Zen Stretching.
+                        </p>
+                        <div id="promo-detail" class="hidden animate-fade-in pt-4 border-t border-white/10 mt-4">
+                             <p class="text-[10px] text-stone-400 leading-relaxed italic mb-4">Potenciá tu Yoga con Ingeniería de Recuperación (Foam Rollers). Válido dentro del mes abonado.</p>
+                             <a href="https://inyodo.github.io/espacio-inyo-web/zen-stretching.html" class="text-[9px] bg-red-800 px-3 py-1 uppercase font-bold tracking-widest">Ver de qué se trata</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -183,7 +190,7 @@
             </div>
             <div class="flex flex-col justify-center items-center md:items-start text-center md:text-left italic text-stone-900">
                 <p class="text-xs font-bold uppercase tracking-widest text-stone-900 mb-2 italic">Lanús Oeste Centro</p>
-                <p class="text-xs text-stone-500 italic text-stone-500">Gdor. Carlos Tejedor 335.</p>
+                <p class="text-xs text-stone-500 italic">Gdor. Carlos Tejedor 335.</p>
             </div>
         </div>
         <div class="border-t border-stone-200 pt-16 mt-16 italic text-stone-900">
@@ -210,7 +217,6 @@
             const audio = document.getElementById('yoga-audio');
             const btn = document.getElementById('music-control');
             const icon = document.getElementById('music-icon');
-
             if (audio.paused) {
                 audio.play();
                 btn.style.animation = "pulse-yoga 2s infinite";
@@ -226,6 +232,5 @@
             }
         }
     </script>
-
 </body>
 </html>
