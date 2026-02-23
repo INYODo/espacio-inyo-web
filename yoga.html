@@ -23,8 +23,11 @@
             70% { box-shadow: 0 0 0 15px rgba(153, 27, 27, 0); }
             100% { box-shadow: 0 0 0 0 rgba(153, 27, 27, 0); }
         }
-        .hover-lift { transition: all 0.3s ease; }
-        .hover-lift:hover { transform: translateY(-5px); }
+        
+        .clase-accordion[open] summary i { transform: rotate(180deg); }
+        .clase-accordion summary::-webkit-details-marker { display: none; }
+        .fade-in-text { animation: fadeIn 0.5s ease-in-out; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(-10px); } to { opacity: 1; transform: translateY(0); } }
     </style>
 </head>
 <body class="antialiased">
@@ -55,10 +58,10 @@
                 <li><a href="https://inyodo.github.io/hiit-calistenia/" class="block hover:text-stone-600 transition text-stone-900">HIIT Calistenia</a></li>
                 <li><a href="#" class="block text-stone-900 font-bold underline underline-offset-8">Clases de Yoga</a></li>
                 <li><a href="https://www.holayoga.com.ar/" target="_blank" class="block hover:text-stone-600 transition text-stone-900">Coaching Online</a></li>
-                <li><a href="https://inyodo.github.io/espacio-inyo-web/zen-stretching.html" class="block hover:text-stone-600 transition text-stone-900">Zen Stretching</a></li>
+                <li><a href="zen-stretching.html" class="block hover:text-stone-600 transition text-stone-900">Zen Stretching</a></li>
                 <li><a href="https://inyodo.github.io/chamanismo/" class="block hover:text-stone-600 transition text-stone-900">Chamanismo</a></li>
                 <li><a href="https://inyodo.github.io/Qigong/" class="block hover:text-stone-600 transition text-stone-900">Qigong</a></li>
-                <li><a href="https://inyodo.github.io/espacio-inyo-web/artes-marciales.html" class="block hover:text-stone-600 transition text-stone-900">Artes Marciales</a></li>
+                <li><a href="artes-marciales.html" class="block hover:text-stone-600 transition text-stone-900">Artes Marciales</a></li>
             </ul>
         </div>
     </nav>
@@ -74,55 +77,105 @@
     <section id="horarios" class="py-24 px-6 bg-white">
         <div class="max-w-6xl mx-auto">
             <h2 class="text-center text-4xl mb-16 italic uppercase font-bold text-stone-900 tracking-tight">Horarios Marzo 2026</h2>
+            <p class="text-center text-stone-400 text-[10px] uppercase tracking-widest mb-10 font-bold italic">Seleccioná una clase para ver detalles técnicos</p>
+            
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 italic">
                 
-                <a href="https://wa.me/541176194825?text=Hola!%20Quisiera%20consultar%20por%20cupos%20disponibles%20para%20Hatha%20Vinyasa%20con%20la%20Profe%20Solange%20(Martes%20y%20Jueves%2010hs)" 
-                   class="p-8 bg-stone-50 border-t-4 border-stone-900 block hover:bg-stone-100 transition-all duration-300 group shadow-sm">
-                    <h3 class="text-xl font-bold mb-1 italic">HATHA VINYASA YOGA</h3>
-                    <p class="text-stone-400 text-[10px] uppercase font-bold mb-4 tracking-widest italic group-hover:text-stone-900">Profe Solange</p>
-                    <p class="text-stone-600 text-sm font-bold italic">Martes y Jueves<br>10:00 HS</p>
-                    <p class="text-[8px] uppercase tracking-[0.3em] mt-6 text-stone-300 group-hover:text-red-800 font-bold transition-colors">Consultar Cupo</p>
-                </a>
+                <details class="clase-accordion group bg-stone-50 border-t-4 border-stone-900 shadow-sm overflow-hidden transition-all duration-300">
+                    <summary class="p-8 cursor-pointer list-none flex flex-col relative">
+                        <h3 class="text-xl font-bold mb-1 italic">HATHA VINYASA YOGA</h3>
+                        <p class="text-stone-400 text-[10px] uppercase font-bold mb-4 tracking-widest italic group-hover:text-stone-900">Profe Solange</p>
+                        <p class="text-stone-600 text-sm font-bold italic">Martes y Jueves • 10:00 HS</p>
+                        <i class="fas fa-chevron-down absolute bottom-4 right-4 text-stone-300 transition-transform"></i>
+                    </summary>
+                    <div class="relative p-8 pt-0 fade-in-text min-h-[160px] flex items-end">
+                        <img src="imagen/flyer-solange.jpg" class="absolute inset-0 w-full h-full object-cover opacity-10 grayscale group-hover:opacity-20 transition-opacity">
+                        <div class="relative z-10">
+                            <p class="text-stone-700 text-[11px] leading-relaxed mb-4 italic font-bold">Sincronización de respiración y movimiento. Genera calor interno y purificación. Ideal para ganar fuerza y fluidez.</p>
+                            <a href="https://wa.me/541176194825" class="inline-block border border-stone-900 px-4 py-2 text-[8px] font-bold uppercase tracking-widest hover:bg-stone-900 hover:text-white transition">Consultar Cupo</a>
+                        </div>
+                    </div>
+                </details>
 
-                <a href="https://wa.me/541176194825?text=Hola!%20Quisiera%20consultar%20por%20cupos%20disponibles%20para%20Yoga%20Integral%20Dinámico%20con%20la%20Profe%20Luciana%20(Lunes%20y%20Miércoles%2018hs)" 
-                   class="p-8 bg-stone-50 border-t-4 border-stone-900 block hover:bg-stone-100 transition-all duration-300 group shadow-sm">
-                    <h3 class="text-xl font-bold mb-1 italic">YOGA INTEGRAL DINÁMICO</h3>
-                    <p class="text-stone-400 text-[10px] uppercase font-bold mb-4 tracking-widest italic group-hover:text-stone-900">Profe Luciana</p>
-                    <p class="text-stone-600 text-sm font-bold italic">Lunes y Miércoles<br>18:00 HS</p>
-                    <p class="text-[8px] uppercase tracking-[0.3em] mt-6 text-stone-300 group-hover:text-red-800 font-bold transition-colors">Consultar Cupo</p>
-                </a>
+                <details class="clase-accordion group bg-stone-50 border-t-4 border-stone-900 shadow-sm overflow-hidden transition-all duration-300">
+                    <summary class="p-8 cursor-pointer list-none flex flex-col relative">
+                        <h3 class="text-xl font-bold mb-1 italic">YOGA INTEGRAL DINÁMICO</h3>
+                        <p class="text-stone-400 text-[10px] uppercase font-bold mb-4 tracking-widest italic group-hover:text-stone-900">Profe Luciana</p>
+                        <p class="text-stone-600 text-sm font-bold italic">Lunes y Miércoles • 18:00 HS</p>
+                        <i class="fas fa-chevron-down absolute bottom-4 right-4 text-stone-300 transition-transform"></i>
+                    </summary>
+                    <div class="relative p-8 pt-0 fade-in-text min-h-[160px] flex items-end">
+                        <img src="imagen/flyer-luciana.jpg" class="absolute inset-0 w-full h-full object-cover opacity-10 grayscale group-hover:opacity-20 transition-opacity">
+                        <div class="relative z-10">
+                            <p class="text-stone-700 text-[11px] leading-relaxed mb-4 italic font-bold">Integración de diversas técnicas para armonizar cuerpo y mente mediante secuencias con ritmo y consciencia.</p>
+                            <a href="https://wa.me/541176194825" class="inline-block border border-stone-900 px-4 py-2 text-[8px] font-bold uppercase tracking-widest hover:bg-stone-900 hover:text-white transition">Consultar Cupo</a>
+                        </div>
+                    </div>
+                </details>
 
-                <a href="https://wa.me/541176194825?text=Hola!%20Quisiera%20consultar%20por%20cupos%20disponibles%20para%20Flexibilidad%20%2B%20Esfero%20con%20la%20Profe%20Luciana%20(Martes%20y%20Jueves%2014hs)" 
-                   class="p-8 bg-stone-50 border-t-4 border-stone-900 block hover:bg-stone-100 transition-all duration-300 group shadow-sm">
-                    <h3 class="text-xl font-bold mb-1 italic">FLEX + ELONGACIÓN + ESFERO</h3>
-                    <p class="text-stone-400 text-[10px] uppercase font-bold mb-4 tracking-widest italic group-hover:text-stone-900">Profe Luciana</p>
-                    <p class="text-stone-600 text-sm font-bold italic">Martes y Jueves<br>14:00 HS</p>
-                    <p class="text-[8px] uppercase tracking-[0.3em] mt-6 text-stone-300 group-hover:text-red-800 font-bold transition-colors">Consultar Cupo</p>
-                </a>
+                <details class="clase-accordion group bg-stone-50 border-t-4 border-stone-900 shadow-sm overflow-hidden transition-all duration-300">
+                    <summary class="p-8 cursor-pointer list-none flex flex-col relative">
+                        <h3 class="text-xl font-bold mb-1 italic">FLEX + ELONGACIÓN + ESFERO</h3>
+                        <p class="text-stone-400 text-[10px] uppercase font-bold mb-4 tracking-widest italic group-hover:text-stone-900">Profe Luciana</p>
+                        <p class="text-stone-600 text-sm font-bold italic">Martes y Jueves • 14:00 HS</p>
+                        <i class="fas fa-chevron-down absolute bottom-4 right-4 text-stone-300 transition-transform"></i>
+                    </summary>
+                    <div class="relative p-8 pt-0 fade-in-text min-h-[160px] flex items-end">
+                        <img src="imagen/flyer-luciana.jpg" class="absolute inset-0 w-full h-full object-cover opacity-10 grayscale group-hover:opacity-20 transition-opacity">
+                        <div class="relative z-10">
+                            <p class="text-stone-700 text-[11px] leading-relaxed mb-4 italic font-bold">Liberación de tensiones profundas con esferas y elementos de soporte para rangos de movilidad óptimos.</p>
+                            <a href="https://wa.me/541176194825" class="inline-block border border-stone-900 px-4 py-2 text-[8px] font-bold uppercase tracking-widest hover:bg-stone-900 hover:text-white transition">Consultar Cupo</a>
+                        </div>
+                    </div>
+                </details>
 
-                <a href="https://wa.me/541176194825?text=Hola!%20Quisiera%20consultar%20por%20cupos%20disponibles%20para%20Hatha%20Yoga%20y%20Meditación%20con%20la%20Profe%20Belén%20(Martes%20y%20Jueves%2018hs)" 
-                   class="p-8 bg-stone-50 border-t-4 border-stone-900 block hover:bg-stone-100 transition-all duration-300 group shadow-sm">
-                    <h3 class="text-xl font-bold mb-1 italic">HATHA YOGA Y MEDITACIÓN</h3>
-                    <p class="text-stone-400 text-[10px] uppercase font-bold mb-4 tracking-widest italic group-hover:text-stone-900">Profe Belén</p>
-                    <p class="text-stone-600 text-sm font-bold italic">Martes y Jueves<br>18:00 HS</p>
-                    <p class="text-[8px] uppercase tracking-[0.3em] mt-6 text-stone-300 group-hover:text-red-800 font-bold transition-colors">Consultar Cupo</p>
-                </a>
+                <details class="clase-accordion group bg-stone-50 border-t-4 border-stone-900 shadow-sm overflow-hidden transition-all duration-300">
+                    <summary class="p-8 cursor-pointer list-none flex flex-col relative">
+                        <h3 class="text-xl font-bold mb-1 italic">HATHA YOGA Y MEDITACIÓN</h3>
+                        <p class="text-stone-400 text-[10px] uppercase font-bold mb-4 tracking-widest italic group-hover:text-stone-900">Profe Belén</p>
+                        <p class="text-stone-600 text-sm font-bold italic">Martes y Jueves • 18:00 HS</p>
+                        <i class="fas fa-chevron-down absolute bottom-4 right-4 text-stone-300 transition-transform"></i>
+                    </summary>
+                    <div class="relative p-8 pt-0 fade-in-text min-h-[160px] flex items-end">
+                        <img src="imagen/flyer-belen.jpg" class="absolute inset-0 w-full h-full object-cover opacity-10 grayscale group-hover:opacity-20 transition-opacity">
+                        <div class="relative z-10">
+                            <p class="text-stone-700 text-[11px] leading-relaxed mb-4 italic font-bold">Enfoque en asanas estables y técnicas de meditación para la calma mental y el equilibrio energético.</p>
+                            <a href="https://wa.me/541176194825" class="inline-block border border-stone-900 px-4 py-2 text-[8px] font-bold uppercase tracking-widest hover:bg-stone-900 hover:text-white transition">Consultar Cupo</a>
+                        </div>
+                    </div>
+                </details>
 
-                <a href="https://wa.me/541176194825?text=Hola!%20Quisiera%20consultar%20por%20cupos%20disponibles%20para%20Yoga%20Integral%20con%20la%20Profe%20Estefy%20(Lunes%20y%20Viernes%2019:15hs)" 
-                   class="p-8 bg-stone-50 border-t-4 border-stone-900 block hover:bg-stone-100 transition-all duration-300 group shadow-sm">
-                    <h3 class="text-xl font-bold mb-1 italic">YOGA INTEGRAL TERAPEUTICO</h3>
-                    <p class="text-stone-400 text-[10px] uppercase font-bold mb-4 tracking-widest italic group-hover:text-stone-900">Profe Estefy</p>
-                    <p class="text-stone-600 text-sm font-bold italic">Lunes y Viernes<br>19:15 HS</p>
-                    <p class="text-[8px] uppercase tracking-[0.3em] mt-6 text-stone-300 group-hover:text-red-800 font-bold transition-colors">Consultar Cupo</p>
-                </a>
+                <details class="clase-accordion group bg-stone-50 border-t-4 border-stone-900 shadow-sm overflow-hidden transition-all duration-300">
+                    <summary class="p-8 cursor-pointer list-none flex flex-col relative">
+                        <h3 class="text-xl font-bold mb-1 italic">YOGA INTEGRAL TERAPEUTICO</h3>
+                        <p class="text-stone-400 text-[10px] uppercase font-bold mb-4 tracking-widest italic group-hover:text-stone-900">Profe Estefy</p>
+                        <p class="text-stone-600 text-sm font-bold italic">Lunes y Viernes • 19:15 HS</p>
+                        <i class="fas fa-chevron-down absolute bottom-4 right-4 text-stone-300 transition-transform"></i>
+                    </summary>
+                    <div class="relative p-8 pt-0 fade-in-text min-h-[160px] flex items-end">
+                        <img src="imagen/flyer-estefy.jpg" class="absolute inset-0 w-full h-full object-cover opacity-10 grayscale group-hover:opacity-20 transition-opacity">
+                        <div class="relative z-10">
+                            <p class="text-stone-700 text-[11px] leading-relaxed mb-4 italic font-bold">Adaptación de posturas para patologías específicas o necesidades físicas particulares. Cuidado y salud.</p>
+                            <a href="https://wa.me/541176194825" class="inline-block border border-stone-900 px-4 py-2 text-[8px] font-bold uppercase tracking-widest hover:bg-stone-900 hover:text-white transition">Consultar Cupo</a>
+                        </div>
+                    </div>
+                </details>
 
-                <a href="https://wa.me/541176194825?text=Hola!%20Quisiera%20consultar%20por%20cupos%20disponibles%20para%20la%20Cápsula%20de%20Movimiento%20con%20la%20Profe%20Luciana%20(Lunes%2010hs)" 
-                   class="p-8 bg-stone-50 border-t-4 border-stone-900 block hover:bg-stone-100 transition-all duration-300 group shadow-sm">
-                    <h3 class="text-xl font-bold mb-1 italic">CÁPSULA DE MOVIMIENTO</h3>
-                    <p class="text-stone-400 text-[10px] uppercase font-bold mb-4 tracking-widest italic group-hover:text-stone-900">Profe Luciana</p>
-                    <p class="text-stone-600 text-sm font-bold italic">Lunes<br>10:00 HS</p>
-                    <p class="text-[8px] uppercase tracking-[0.3em] mt-6 text-stone-300 group-hover:text-red-800 font-bold transition-colors">Consultar Cupo</p>
-                </a>
+                <details class="clase-accordion group bg-stone-50 border-t-4 border-stone-900 shadow-sm overflow-hidden transition-all duration-300">
+                    <summary class="p-8 cursor-pointer list-none flex flex-col relative">
+                        <h3 class="text-xl font-bold mb-1 italic">CÁPSULA DE MOVIMIENTO</h3>
+                        <p class="text-stone-400 text-[10px] uppercase font-bold mb-4 tracking-widest italic group-hover:text-stone-900">Profe Luciana</p>
+                        <p class="text-stone-600 text-sm font-bold italic">Lunes • 10:00 HS</p>
+                        <i class="fas fa-chevron-down absolute bottom-4 right-4 text-stone-300 transition-transform"></i>
+                    </summary>
+                    <div class="relative p-8 pt-0 fade-in-text min-h-[160px] flex items-end">
+                        <img src="imagen/flyer-luciana.jpg" class="absolute inset-0 w-full h-full object-cover opacity-10 grayscale group-hover:opacity-20 transition-opacity">
+                        <div class="relative z-10">
+                            <p class="text-stone-700 text-[11px] leading-relaxed mb-4 italic font-bold">Exploración somática y patrones de movimiento orgánico para desbloquear el cuerpo y ganar libertad.</p>
+                            <a href="https://wa.me/541176194825" class="inline-block border border-stone-900 px-4 py-2 text-[8px] font-bold uppercase tracking-widest hover:bg-stone-900 hover:text-white transition">Consultar Cupo</a>
+                        </div>
+                    </div>
+                </details>
 
             </div>
         </div>
@@ -132,7 +185,7 @@
         <div class="max-w-6xl mx-auto">
             <h2 class="text-center text-5xl mb-16 italic uppercase font-bold tracking-tighter text-stone-900">Inversión Yoga Marzo</h2>
             <div class="grid md:grid-cols-3 gap-8 items-stretch mb-16 italic text-stone-900">
-                <div class="bg-white p-10 border border-stone-100 flex flex-col shadow-sm">
+                <div class="bg-white p-10 border border-stone-100 flex flex-col shadow-sm text-stone-900">
                     <h3 class="text-stone-400 font-bold mb-4 uppercase text-xs italic">1 Vez x Semana</h3>
                     <div class="text-5xl font-bold mb-2 text-stone-900 italic">$48.000</div>
                     <p class="text-[10px] text-stone-400 font-bold uppercase mb-8 italic">4 clases mensuales</p>
@@ -166,14 +219,14 @@
                 <div class="relative group overflow-hidden bg-stone-900 p-8 text-white shadow-xl italic cursor-pointer" onclick="document.getElementById('promo-detail').classList.toggle('hidden')">
                     <img src="https://inyodo.github.io/hiit-calistenia/imagen/dojo-clean.png" class="absolute inset-0 w-full h-full object-cover opacity-20 group-hover:scale-110 transition-transform duration-700">
                     <div class="relative z-10">
-                        <h4 class="font-bold uppercase text-xs mb-4 tracking-widest text-red-500 italic">Bonificación INYO ☯️ (Click para ver)</h4>
+                        <h4 class="font-bold uppercase text-xs mb-4 tracking-widest text-red-500 italic font-bold">Bonificación INYO ☯️ (Click para ver)</h4>
                         <p class="text-[11px] leading-relaxed mb-4 italic text-stone-300">
                             • Pack 1x y 2x semanal: Incluye <strong>1 Clase Mensual</strong> de Zen Stretching.<br>
                             • Pack 3x semanal: Incluye <strong>2 Clases Mensuales</strong> de Zen Stretching.
                         </p>
                         <div id="promo-detail" class="hidden animate-fade-in pt-4 border-t border-white/10 mt-4">
                              <p class="text-[10px] text-stone-400 leading-relaxed italic mb-4">Potenciá tu Yoga con Ingeniería de Recuperación (Foam Rollers). Válido dentro del mes abonado.</p>
-                             <a href="https://inyodo.github.io/espacio-inyo-web/zen-stretching.html" class="text-[9px] bg-red-800 px-3 py-1 uppercase font-bold tracking-widest">Ver de qué se trata</a>
+                             <a href="zen-stretching.html" class="text-[9px] bg-red-800 px-3 py-1 uppercase font-bold tracking-widest">Ver de qué se trata</a>
                         </div>
                     </div>
                 </div>
@@ -199,10 +252,10 @@
                 <a href="https://inyodo.github.io/masaje-japones-/" class="hover:text-stone-900 transition underline underline-offset-8 italic text-stone-900">Masaje Japonés</a>
                 <a href="https://inyodo.github.io/hiit-calistenia/" class="hover:text-stone-900 transition underline underline-offset-8 italic text-stone-900">HIIT Calistenia</a>
                 <a href="https://www.holayoga.com.ar/" target="_blank" class="hover:text-stone-900 transition underline underline-offset-8 italic text-stone-900">Coaching Online</a>
-                <a href="https://inyodo.github.io/espacio-inyo-web/zen-stretching.html" class="hover:text-stone-900 transition underline underline-offset-8 italic text-stone-900">Zen Stretching</a>
+                <a href="zen-stretching.html" class="hover:text-stone-900 transition underline underline-offset-8 italic text-stone-900">Zen Stretching</a>
                 <a href="https://inyodo.github.io/chamanismo/" class="hover:text-stone-900 transition underline underline-offset-8 italic text-stone-900">Chamanismo</a>
                 <a href="https://inyodo.github.io/Qigong/" class="hover:text-stone-900 transition underline underline-offset-8 italic text-stone-900">Qigong</a>
-                <a href="https://inyodo.github.io/espacio-inyo-web/artes-marciales.html" class="hover:text-stone-900 transition underline underline-offset-8 italic text-stone-900">Artes Marciales</a>
+                <a href="artes-marciales.html" class="hover:text-stone-900 transition underline underline-offset-8 italic text-stone-900">Artes Marciales</a>
             </div>
             <p class="mt-20 text-[9px] text-stone-300 uppercase tracking-widest font-bold italic">© 2026 Espacio INYO</p>
         </div>
