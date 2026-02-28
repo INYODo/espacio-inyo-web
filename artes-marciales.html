@@ -361,53 +361,119 @@
         </div>
     </section>
 
-    <section class="py-32 px-6 bg-[#0c0a09] border-y border-white/5 relative">
+    <style>
+        .gaston-schedule-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .gaston-card {
+            position: relative;
+            width: 100%;
+            height: 150px;
+            background: #000;
+            border: 1px solid #333;
+            overflow: hidden;
+            transition: height 0.6s ease-in-out, border-color 0.4s;
+            cursor: pointer;
+        }
+        /* Esto obliga al despliegue */
+        .gaston-card:hover {
+            height: 400px !important;
+            border-color: #991b1b !important;
+        }
+        .gaston-bg {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background-size: cover;
+            background-position: center;
+            opacity: 0.2;
+            transition: opacity 0.6s, transform 0.6s;
+            z-index: 1;
+        }
+        .gaston-card:hover .gaston-bg {
+            opacity: 0.5;
+            transform: scale(1.05);
+        }
+        .gaston-overlay {
+            position: relative;
+            z-index: 10;
+            padding: 30px;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            background: linear-gradient(to right, #000 40%, transparent);
+        }
+        .gaston-btn-group {
+            margin-top: auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 10px;
+            opacity: 0;
+            transition: opacity 0.4s ease 0.3s;
+        }
+        .gaston-card:hover .gaston-btn-group {
+            opacity: 1;
+        }
+        .gaston-btn {
+            padding: 12px;
+            text-align: center;
+            font-size: 10px;
+            font-weight: bold;
+            text-transform: uppercase;
+            border: 1px solid;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+    </style>
+
+    <section class="py-32 px-6" style="background-color: #0c0a09;">
         <div class="max-w-6xl mx-auto">
             <div class="text-center mb-16">
-                <h2 class="text-red-700 font-bold tracking-[0.5em] text-xs uppercase mb-4 italic">Cronograma de Entrenamiento</h2>
-                <p class="text-stone-500 text-[10px] italic tracking-widest uppercase font-bold">Selecciona tu Dōjō para iniciar el camino</p>
+                <h2 style="color:#991b1b; letter-spacing: 0.5em; font-size: 12px; font-weight: bold; text-transform: uppercase; margin-bottom: 10px;">Cronograma de Entrenamiento</h2>
+                <p style="color:#666; font-size: 10px; text-transform: uppercase; font-weight: bold;">Pasa el mouse para expandir detalles</p>
             </div>
 
-            <div class="dojo-schedule-wrapper">
+            <div class="gaston-schedule-grid">
                 
-                <div class="dojo-block">
-                    <div class="dojo-bg-image" style="background-image: url('imagen/kiryu-dojo.JPEG');"></div>
-                    <div class="dojo-overlay">
-                        <div class="dojo-title-box">
-                            <p class="text-red-700 text-[10px] font-bold tracking-[0.4em] uppercase italic">Kiryū Dōjō 🐉</p>
-                            <h3 class="brand-font">Martes y Jueves</h3>
-                            <p class="text-red-600 text-xl font-bold italic tracking-widest">19:00 HS</p>
+                <div class="gaston-card">
+                    <div class="gaston-bg" style="background-image: url('imagen/kiryu-dojo.JPEG');"></div>
+                    
+                    <div class="gaston-overlay">
+                        <div>
+                            <p style="color:#991b1b; font-size: 10px; font-weight: bold; letter-spacing: 0.3em; text-transform: uppercase; margin: 0;">Kiryū Dōjō 🐉</p>
+                            <h3 style="color:#fff; font-size: 35px; margin: 5px 0; font-family: 'Oswald', sans-serif; text-transform: uppercase;">Martes y Jueves</h3>
+                            <p style="color:#991b1b; font-size: 20px; font-weight: bold; font-style: italic; margin: 0;">19:00 HS</p>
                         </div>
                         
-                        <div class="dojo-actions italic">
-                            <a href="https://wa.me/541176194825?text=Hola%20Gastón!%20Quiero%20una%20CLASE%20DE%20PRUEBA%20en%20Kiryū%20Dōjō%20(Martes/Jueves%2019hs)." class="btn-action btn-prueba">Clase de Prueba</a>
-                            <a href="https://wa.me/541176194825?text=Hola%20Gastón!%20Quiero%20inscribirme%20al%20PACK%20GUERRERO%20en%20Kiryū%20Dōjō%20(Martes/Jueves%2019hs)%20-%20Valor%20$49.000." class="btn-action btn-guerrero">Pack Guerrero</a>
-                            <a href="https://wa.me/541176194825?text=Hola%20Gastón!%20Quiero%20inscribirme%20al%20PACK%20SHOGUN%20en%20Kiryū%20Dōjō%20(Martes/Jueves%2019hs)%20-%20Valor%20$55.000." class="btn-action btn-shogun">Pack Shogun</a>
+                        <div class="gaston-btn-group">
+                            <a href="https://wa.me/541176194825?text=Hola!%20Quiero%20probar%20clase%20en%20Kiryu%20Dojo" class="gaston-btn" style="border-color:#444; color:#aaa;">Prueba Gratis</a>
+                            <a href="https://wa.me/541176194825?text=Hola!%20Me%20anoto%20al%20Pack%20Guerrero%20(Kiryu)" class="gaston-btn" style="border-color:#991b1b; color:#fff; background: rgba(153,27,27,0.2);">Pack Guerrero</a>
+                            <a href="https://wa.me/541176194825?text=Hola!%20Me%20anoto%20al%20Pack%20Shogun%20(Kiryu)" class="gaston-btn" style="border-color:#8a744d; color:#8a744d;">Pack Shogun</a>
                         </div>
                     </div>
                 </div>
 
-                <div class="dojo-block">
-                    <div class="dojo-bg-image" style="background-image: url('imagen/kensaku-dojo.HEIC');"></div>
-                    <div class="dojo-overlay">
-                        <div class="dojo-title-box">
-                            <p class="text-red-700 text-[10px] font-bold tracking-[0.4em] uppercase italic">Kensaku Dōjō ⚔️</p>
-                            <h3 class="brand-font">Viernes</h3>
-                            <p class="text-red-600 text-xl font-bold italic tracking-widest">20:30 HS</p>
+                <div class="gaston-card">
+                    <div class="gaston-bg" style="background-image: url('imagen/kensaku-dojo.HEIC');"></div>
+                    
+                    <div class="gaston-overlay">
+                        <div>
+                            <p style="color:#991b1b; font-size: 10px; font-weight: bold; letter-spacing: 0.3em; text-transform: uppercase; margin: 0;">Kensaku Dōjō ⚔️</p>
+                            <h3 style="color:#fff; font-size: 35px; margin: 5px 0; font-family: 'Oswald', sans-serif; text-transform: uppercase;">Viernes</h3>
+                            <p style="color:#991b1b; font-size: 20px; font-weight: bold; font-style: italic; margin: 0;">20:30 HS</p>
                         </div>
                         
-                        <div class="dojo-actions italic">
-                            <a href="https://wa.me/541176194825?text=Hola%20Gastón!%20Quiero%20una%20CLASE%20DE%20PRUEBA%20en%20Kensaku%20Dōjō%20(Viernes%2020:30hs)." class="btn-action btn-prueba">Clase de Prueba</a>
-                            <a href="https://wa.me/541176194825?text=Hola%20Gastón!%20Quiero%20inscribirme%20al%20PACK%20GUERRERO%20en%20Kensaku%20Dōjō%20(Viernes%2020:30hs)%20-%20Valor%20$49.000." class="btn-action btn-guerrero">Pack Guerrero</a>
-                            <a href="https://wa.me/541176194825?text=Hola%20Gastón!%20Quiero%20inscribirme%20al%20PACK%20SHOGUN%20en%20Kensaku%20Dōjō%20(Viernes%2020:30hs)%20-%20Valor%20$55.000." class="btn-action btn-shogun">Pack Shogun</a>
+                        <div class="gaston-btn-group">
+                            <a href="https://wa.me/541176194825?text=Hola!%20Quiero%20probar%20clase%20en%20Kensaku%20Dojo" class="gaston-btn" style="border-color:#444; color:#aaa;">Prueba Gratis</a>
+                            <a href="https://wa.me/541176194825?text=Hola!%20Me%20anoto%20al%20Pack%20Guerrero%20(Kensaku)" class="gaston-btn" style="border-color:#991b1b; color:#fff; background: rgba(153,27,27,0.2);">Pack Guerrero</a>
+                            <a href="https://wa.me/541176194825?text=Hola!%20Me%20anoto%20al%20Pack%20Shogun%20(Kensaku)" class="gaston-btn" style="border-color:#8a744d; color:#8a744d;">Pack Shogun</a>
                         </div>
                     </div>
                 </div>
 
-            </div>
-
-            <div class="mt-20 text-center">
-                <p class="text-stone-500 text-[9px] italic tracking-[0.5em] uppercase">Sede Central: Gdor. Carlos Tejedor 335, Lanús Oeste.</p>
             </div>
         </div>
     </section>
