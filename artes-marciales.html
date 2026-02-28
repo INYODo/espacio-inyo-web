@@ -67,7 +67,8 @@
             flex-direction: column; 
             gap: 2.5rem; 
             align-items: center; 
-            perspective: 1000px;
+            position: relative;
+            z-index: 50;
         }
 
         .schedule-card {
@@ -77,16 +78,15 @@
             height: 140px;
             overflow: hidden;
             border: 1px solid rgba(255,255,255,0.1);
-            transition: all 0.7s cubic-bezier(0.19, 1, 0.22, 1);
+            transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
             cursor: pointer;
-            background: #0c0a09;
-            z-index: 10;
+            background: #000;
         }
 
         .schedule-card:hover { 
-            height: 350px; 
+            height: 380px; 
             border-color: #991b1b; 
-            box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+            box-shadow: 0 0 50px rgba(153, 27, 27, 0.3);
         }
         
         .schedule-bg {
@@ -94,40 +94,45 @@
             inset: 0;
             background-size: cover;
             background-position: center;
-            opacity: 0.25;
-            transition: all 0.8s ease;
-            filter: grayscale(100%) brightness(0.4);
+            opacity: 0.3;
+            transition: all 1s ease;
+            filter: grayscale(100%) brightness(0.3);
             z-index: 1;
         }
         
         .schedule-card:hover .schedule-bg { 
-            opacity: 0.6; 
-            filter: grayscale(0%) brightness(0.6); 
+            opacity: 0.7; 
+            filter: grayscale(0%) brightness(0.5); 
             transform: scale(1.1); 
         }
         
         .schedule-content {
             position: relative;
-            z-index: 20;
+            z-index: 10;
             padding: 2.5rem;
             height: 100%;
             display: flex;
             flex-direction: column;
             justify-content: flex-start;
-            background: linear-gradient(to right, rgba(12,10,9,0.95) 40%, transparent);
+            background: linear-gradient(to right, #000 30%, rgba(0,0,0,0.4) 70%, transparent);
+        }
+
+        .schedule-info {
+            position: relative;
+            z-index: 20;
         }
 
         .schedule-info h3 {
-            color: #ffffff;
-            text-shadow: 2px 2px 10px rgba(0,0,0,0.8);
-            margin-bottom: 0.5rem;
+            color: #ffffff !important;
+            text-shadow: 3px 3px 15px rgba(0,0,0,1);
         }
         
         .schedule-action {
             opacity: 0;
-            transform: translateY(30px);
-            transition: all 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+            transform: translateY(40px);
+            transition: all 0.5s ease 0.1s;
             pointer-events: none;
+            margin-top: 2rem;
         }
 
         .schedule-card:hover .schedule-action { 
@@ -336,7 +341,7 @@
         </div>
     </section>
 
-    <section class="section-dark py-32 px-6 border-y border-white/5">
+    <section class="section-dark py-32 px-6 border-y border-white/5" style="z-index: 40;">
         <div class="max-w-5xl mx-auto">
             <div class="text-center mb-16">
                 <h2 class="text-red-700 font-bold tracking-[0.4em] text-xs uppercase mb-4 italic">Cronograma de Entrenamiento</h2>
@@ -350,15 +355,15 @@
                     <div class="schedule-content">
                         <div class="schedule-info">
                             <p class="text-red-700 text-[10px] font-bold tracking-[0.3em] uppercase mb-2">Kiryū Dōjō 🐉</p>
-                            <h3 class="text-4xl font-bold italic tracking-tighter">Martes y Jueves</h3>
+                            <h3 class="text-4xl font-bold italic tracking-tighter text-white">Martes y Jueves</h3>
                             <p class="text-red-600 text-2xl font-bold italic tracking-widest">19:00 HS</p>
                         </div>
                         <div class="schedule-action">
                             <p class="text-stone-300 text-sm mb-6 italic border-l-2 border-red-900 pl-4 max-w-sm">
                                 Bujinkan Budo Taijutsu: El arte del movimiento natural y la efectividad del guerrero.
                             </p>
-                            <a href="https://wa.me/541176194825?text=Hola%20Gastón!%20Deseo%20solicitar%20cupo%20para%20Kiryū%20Dōjō%20(Martes%20y%20Jueves%2019hs).%20Consulto%20disponibilidad%20y%20valor%20de%20reserva." 
-                               class="inline-block bg-red-900 hover:bg-white hover:text-black text-white px-8 py-3 text-[10px] font-bold uppercase tracking-widest transition-all duration-500 border border-red-700 shadow-xl">
+                            <a href="https://wa.me/541176194825?text=Hola%20Gastón!%20Deseo%20solicitar%20cupo%20para%20Kiryū%20Dōjō%20(Martes%20y%20Jueves%2019hs)." 
+                               class="inline-block bg-red-900 text-white px-8 py-3 text-[10px] font-bold uppercase tracking-widest hover:bg-white hover:text-black transition-all duration-300 border border-red-700">
                                Solicitar Cupo Kiryū
                             </a>
                         </div>
@@ -370,15 +375,15 @@
                     <div class="schedule-content">
                         <div class="schedule-info">
                             <p class="text-red-700 text-[10px] font-bold tracking-[0.3em] uppercase mb-2">Kensaku Dōjō ⚔️</p>
-                            <h3 class="text-4xl font-bold italic tracking-tighter">Viernes</h3>
+                            <h3 class="text-4xl font-bold italic tracking-tighter text-white">Viernes</h3>
                             <p class="text-red-600 text-2xl font-bold italic tracking-widest">20:30 HS</p>
                         </div>
                         <div class="schedule-action">
                             <p class="text-stone-300 text-sm mb-6 italic border-l-2 border-red-900 pl-4 max-w-sm">
                                 Entrenamiento intensivo de tradiciones antiguas y armas tradicionales.
                             </p>
-                            <a href="https://wa.me/541176194825?text=Hola%20Gastón!%20Deseo%20solicitar%20cupo%20para%20Kensaku%20Dōjō%20(Viernes%2020:30hs).%20Consulto%20disponibilidad%20y%20valor%20de%20reserva." 
-                               class="inline-block bg-red-900 hover:bg-white hover:text-black text-white px-8 py-3 text-[10px] font-bold uppercase tracking-widest transition-all duration-500 border border-red-700 shadow-xl">
+                            <a href="https://wa.me/541176194825?text=Hola%20Gastón!%20Deseo%20solicitar%20cupo%20para%20Kensaku%20Dōjō%20(Viernes%2020:30hs)." 
+                               class="inline-block bg-red-900 text-white px-8 py-3 text-[10px] font-bold uppercase tracking-widest hover:bg-white hover:text-black transition-all duration-300 border border-red-700">
                                Solicitar Cupo Kensaku
                             </a>
                         </div>
