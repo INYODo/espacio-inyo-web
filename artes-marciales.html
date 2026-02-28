@@ -62,51 +62,79 @@
         .price-card { background: linear-gradient(145deg, #171717, #0c0a09); border: 1px solid rgba(255,255,255,0.05); transition: all 0.4s ease; }
         .price-card:hover { border-color: #991b1b; transform: translateY(-5px); }
 /* Tarjetas de Horario Interactivas */
-        .schedule-container { display: flex; flex-direction: column; gap: 2rem; align-items: center; }
+        .schedule-container { 
+            display: flex; 
+            flex-direction: column; 
+            gap: 2.5rem; 
+            align-items: center; 
+            perspective: 1000px;
+        }
+
         .schedule-card {
             position: relative;
             width: 100%;
-            max-width: 500px;
-            height: 120px;
+            max-width: 650px;
+            height: 140px;
             overflow: hidden;
             border: 1px solid rgba(255,255,255,0.1);
-            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            transition: all 0.7s cubic-bezier(0.19, 1, 0.22, 1);
             cursor: pointer;
-            background: #171717;
+            background: #0c0a09;
+            z-index: 10;
         }
-        .schedule-card:hover { height: 280px; border-color: #991b1b; transform: scale(1.02); }
+
+        .schedule-card:hover { 
+            height: 350px; 
+            border-color: #991b1b; 
+            box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+        }
         
         .schedule-bg {
             position: absolute;
             inset: 0;
             background-size: cover;
             background-position: center;
-            opacity: 0.3;
-            transition: opacity 0.5s ease;
-            filter: grayscale(100%);
+            opacity: 0.25;
+            transition: all 0.8s ease;
+            filter: grayscale(100%) brightness(0.4);
+            z-index: 1;
         }
-        .schedule-card:hover .schedule-bg { opacity: 0.6; filter: grayscale(0%); }
+        
+        .schedule-card:hover .schedule-bg { 
+            opacity: 0.6; 
+            filter: grayscale(0%) brightness(0.6); 
+            transform: scale(1.1); 
+        }
         
         .schedule-content {
             position: relative;
-            z-index: 10;
-            padding: 2rem;
+            z-index: 20;
+            padding: 2.5rem;
             height: 100%;
             display: flex;
             flex-direction: column;
-            justify-content: center;
-            background: linear-gradient(to top, rgba(12,10,9,0.9), transparent);
+            justify-content: flex-start;
+            background: linear-gradient(to right, rgba(12,10,9,0.95) 40%, transparent);
         }
-        .schedule-info { transition: transform 0.5s ease; }
-        .schedule-card:hover .schedule-info { transform: translateY(-10px); }
+
+        .schedule-info h3 {
+            color: #ffffff;
+            text-shadow: 2px 2px 10px rgba(0,0,0,0.8);
+            margin-bottom: 0.5rem;
+        }
         
         .schedule-action {
             opacity: 0;
-            transform: translateY(20px);
-            transition: all 0.5s ease;
-            margin-top: 1.5rem;
+            transform: translateY(30px);
+            transition: all 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+            pointer-events: none;
         }
-        .schedule-card:hover .schedule-action { opacity: 1; transform: translateY(0); }
+
+        .schedule-card:hover .schedule-action { 
+            opacity: 1; 
+            transform: translateY(0);
+            pointer-events: auto;
+        }
         /* Estilo Botón Taiko Drums */
         .music-btn-taiko {
             position: fixed; bottom: 40px; left: 40px; width: 60px; height: 60px;
