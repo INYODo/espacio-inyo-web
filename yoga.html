@@ -85,137 +85,101 @@
             
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 italic select-none">
                 
-                <details class="clase-accordion group bg-stone-50 border-t-4 border-stone-900 shadow-sm overflow-hidden transition-all duration-300">
-                    <summary class="p-8 cursor-pointer list-none flex flex-col relative outline-none">
-                        <h3 class="text-xl font-bold mb-1 italic">HATHA VINYASA YOGA</h3>
-                        <p class="text-stone-400 text-[10px] uppercase font-bold mb-2 tracking-widest italic">Profe Solange</p>
-                        <p class="text-stone-600 text-sm font-bold italic">Martes y Jueves • 10:00 HS</p>
-                        <i class="fas fa-plus absolute bottom-4 right-4 text-stone-300 transition-transform group-open:rotate-45"></i>
-                    </summary>
-                    <div class="p-8 pt-0 fade-in-text">
-                        <div class="bg-white p-4 border border-stone-200 mb-4 space-y-3">
-                            <p class="text-[9px] uppercase font-bold text-stone-400 tracking-widest border-b pb-2 mb-2">Ficha de Salud:</p>
-                            <label class="flex items-center gap-3 cursor-pointer"><input type="checkbox" id="imp-sol" class="w-4 h-4 accent-stone-900"><span class="text-[10px] font-bold uppercase">Impedimento físico</span></label>
-                            <label class="flex items-center gap-3 cursor-pointer"><input type="checkbox" id="rec-sol" class="w-4 h-4 accent-stone-900"><span class="text-[10px] font-bold uppercase">Recomendación médica</span></label>
-                        </div>
+                <div class="bg-stone-50 border-t-4 border-stone-900 shadow-sm p-8 flex flex-col group transition-all duration-500 hover:shadow-xl cursor-default relative overflow-hidden">
+                    <h3 class="text-xl font-bold mb-1 italic">HATHA VINYASA YOGA</h3>
+                    <p class="text-stone-400 text-[10px] uppercase font-bold mb-2 tracking-widest italic">Profe Solange</p>
+                    <p class="text-stone-600 text-sm font-bold italic">Martes y Jueves • 10:00 HS</p>
+                    
+                    <div class="max-h-0 opacity-0 overflow-hidden group-hover:max-h-[500px] group-hover:opacity-100 group-hover:mt-6 transition-all duration-500 ease-in-out">
+                        <p class="text-[9px] uppercase font-bold text-stone-400 tracking-widest mb-4 border-b pb-2">Seleccioná tu Plan:</p>
                         <div class="grid grid-cols-2 gap-2">
-                            <button onclick="enviarInscripcion('Hatha Vinyasa (10hs)', 'Prueba', 18000, 'imp-sol', 'rec-sol')" class="bg-white border border-stone-200 py-3 text-[8px] font-bold uppercase hover:bg-stone-100 transition">Prueba $18.000</button>
-                            <button onclick="enviarInscripcion('Hatha Vinyasa (10hs)', 'Mensual 1x', 48000, 'imp-sol', 'rec-sol')" class="bg-stone-100 border border-stone-200 py-3 text-[8px] font-bold uppercase hover:bg-stone-200 transition">Plan 1x $48.000</button>
-                            <button onclick="enviarInscripcion('Hatha Vinyasa (10hs)', 'Mensual 2x', 62000, 'imp-sol', 'rec-sol')" class="bg-stone-900 text-white py-3 text-[8px] font-bold uppercase hover:bg-stone-700 transition col-span-2 italic">Asegurar Cupo (2x) $62.000</button>
-                            <button onclick="enviarInscripcion('Hatha Vinyasa (10hs)', 'Mensual 3x', 84000, 'imp-sol', 'rec-sol')" class="bg-white border border-stone-800 py-3 text-[8px] font-bold uppercase hover:bg-stone-900 hover:text-white transition col-span-2 italic">Plan Maestro (3x) $84.000</button>
+                            <a href="https://wa.me/541176194825?text=Hola%20Gast%C3%B3n!%20Quiero%20reservar%20una%20*CLASE%20DE%20PRUEBA*%20de%20Hatha%20Vinyasa%20(10hs)%20-%20$18.000" class="bg-white border border-stone-200 py-3 text-[8px] font-bold uppercase hover:bg-stone-100 transition text-center">Prueba $18.000</a>
+                            <a href="https://wa.me/541176194825?text=Hola%20Gast%C3%B3n!%20Deseo%20inscribirme%20al%20*PLAN%201X*%20(Mensual)%20de%20Hatha%20Vinyasa%20(10hs)%20-%20$48.000" class="bg-stone-100 border border-stone-200 py-3 text-[8px] font-bold uppercase hover:bg-stone-200 transition text-center">Plan 1x $48.000</a>
+                            <a href="https://wa.me/541176194825?text=Hola%20Gast%C3%B3n!%20Deseo%20asegurar%20mi%20cupo%20en%20el%20*PLAN%20EQUILIBRIO%202X*%20de%20Hatha%20Vinyasa%20(10hs)%20-%20$62.000" class="bg-stone-900 text-white py-3 text-[8px] font-bold uppercase hover:bg-stone-700 transition col-span-2 text-center">Asegurar Cupo (2x) $62.000</a>
+                            <a href="https://wa.me/541176194825?text=Hola%20Gast%C3%B3n!%20Deseo%20inscribirme%20al%20*PLAN%20MAESTRO%203X*%20de%20Hatha%20Vinyasa%20(10hs)%20-%20$84.000" class="bg-white border border-stone-800 py-3 text-[8px] font-bold uppercase hover:bg-stone-900 hover:text-white transition col-span-2 text-center">Plan Maestro (3x) $84.000</a>
                         </div>
                     </div>
-                </details>
+                </div>
 
-                <details class="clase-accordion group bg-stone-50 border-t-4 border-stone-900 shadow-sm overflow-hidden transition-all duration-300">
-                    <summary class="p-8 cursor-pointer list-none flex flex-col relative outline-none">
-                        <h3 class="text-xl font-bold mb-1 italic">YOGA INTEGRAL DINÁMICO</h3>
-                        <p class="text-stone-400 text-[10px] uppercase font-bold mb-2 tracking-widest italic">Profe Luciana</p>
-                        <p class="text-stone-600 text-sm font-bold italic">Lunes y Miércoles • 18:00 HS</p>
-                        <i class="fas fa-plus absolute bottom-4 right-4 text-stone-300 transition-transform group-open:rotate-45"></i>
-                    </summary>
-                    <div class="p-8 pt-0 fade-in-text">
-                        <div class="bg-white p-4 border border-stone-200 mb-4 space-y-3">
-                            <p class="text-[9px] uppercase font-bold text-stone-400 tracking-widest border-b pb-2 mb-2">Ficha de Salud:</p>
-                            <label class="flex items-center gap-3 cursor-pointer"><input type="checkbox" id="imp-luc-din" class="w-4 h-4 accent-stone-900"><span class="text-[10px] font-bold uppercase">Impedimento físico</span></label>
-                            <label class="flex items-center gap-3 cursor-pointer"><input type="checkbox" id="rec-luc-din" class="w-4 h-4 accent-stone-900"><span class="text-[10px] font-bold uppercase">Recomendación médica</span></label>
-                        </div>
+                <div class="bg-stone-50 border-t-4 border-stone-900 shadow-sm p-8 flex flex-col group transition-all duration-500 hover:shadow-xl cursor-default relative overflow-hidden">
+                    <h3 class="text-xl font-bold mb-1 italic">YOGA INTEGRAL DINÁMICO</h3>
+                    <p class="text-stone-400 text-[10px] uppercase font-bold mb-2 tracking-widest italic">Profe Luciana</p>
+                    <p class="text-stone-600 text-sm font-bold italic">Lunes y Miércoles • 18:00 HS</p>
+                    
+                    <div class="max-h-0 opacity-0 overflow-hidden group-hover:max-h-[500px] group-hover:opacity-100 group-hover:mt-6 transition-all duration-500 ease-in-out">
+                        <p class="text-[9px] uppercase font-bold text-stone-400 tracking-widest mb-4 border-b pb-2">Seleccioná tu Plan:</p>
                         <div class="grid grid-cols-2 gap-2">
-                            <button onclick="enviarInscripcion('Yoga Dinámico (18hs)', 'Prueba', 18000, 'imp-luc-din', 'rec-luc-din')" class="bg-white border border-stone-200 py-3 text-[8px] font-bold uppercase hover:bg-stone-100 transition">Prueba $18.000</button>
-                            <button onclick="enviarInscripcion('Yoga Dinámico (18hs)', 'Mensual 1x', 48000, 'imp-luc-din', 'rec-luc-din')" class="bg-stone-100 border border-stone-200 py-3 text-[8px] font-bold uppercase hover:bg-stone-200 transition">Plan 1x $48.000</button>
-                            <button onclick="enviarInscripcion('Yoga Dinámico (18hs)', 'Mensual 2x', 62000, 'imp-luc-din', 'rec-luc-din')" class="bg-stone-900 text-white py-3 text-[8px] font-bold uppercase hover:bg-stone-700 transition col-span-2 italic">Asegurar Cupo (2x) $62.000</button>
-                            <button onclick="enviarInscripcion('Yoga Dinámico (18hs)', 'Mensual 3x', 84000, 'imp-luc-din', 'rec-luc-din')" class="bg-white border border-stone-800 py-3 text-[8px] font-bold uppercase hover:bg-stone-900 hover:text-white transition col-span-2 italic">Plan Maestro (3x) $84.000</button>
+                            <a href="https://wa.me/541176194825?text=Hola%20Gast%C3%B3n!%20Quiero%20reservar%20una%20*CLASE%20DE%20PRUEBA*%20de%20Yoga%20Din%C3%A1mico%20(18hs)%20-%20$18.000" class="bg-white border border-stone-200 py-3 text-[8px] font-bold uppercase hover:bg-stone-100 transition text-center">Prueba $18.000</a>
+                            <a href="https://wa.me/541176194825?text=Hola%20Gast%C3%B3n!%20Deseo%20inscribirme%20al%20*PLAN%201X*%20de%20Yoga%20Din%C3%A1mico%20(18hs)%20-%20$48.000" class="bg-stone-100 border border-stone-200 py-3 text-[8px] font-bold uppercase hover:bg-stone-200 transition text-center">Plan 1x $48.000</a>
+                            <a href="https://wa.me/541176194825?text=Hola%20Gast%C3%B3n!%20Deseo%20asegurar%20mi%20cupo%20en%20el%20*PLAN%20EQUILIBRIO%202X*%20de%20Yoga%20Din%C3%A1mico%20(18hs)%20-%20$62.000" class="bg-stone-900 text-white py-3 text-[8px] font-bold uppercase hover:bg-stone-700 transition col-span-2 text-center">Asegurar Cupo (2x) $62.000</a>
+                            <a href="https://wa.me/541176194825?text=Hola%20Gast%C3%B3n!%20Deseo%20inscribirme%20al%20*PLAN%20MAESTRO%203X*%20de%20Yoga%20Din%C3%A1mico%20(18hs)%20-%20$84.000" class="bg-white border border-stone-800 py-3 text-[8px] font-bold uppercase hover:bg-stone-900 hover:text-white transition col-span-2 text-center">Plan Maestro (3x) $84.000</a>
                         </div>
                     </div>
-                </details>
+                </div>
 
-                <details class="clase-accordion group bg-stone-50 border-t-4 border-stone-900 shadow-sm overflow-hidden transition-all duration-300">
-                    <summary class="p-8 cursor-pointer list-none flex flex-col relative outline-none">
-                        <h3 class="text-xl font-bold mb-1 italic">FLEX + ESFERO</h3>
-                        <p class="text-stone-400 text-[10px] uppercase font-bold mb-2 tracking-widest italic">Profe Luciana</p>
-                        <p class="text-stone-600 text-sm font-bold italic">Martes y Jueves • 14:00 HS</p>
-                        <i class="fas fa-plus absolute bottom-4 right-4 text-stone-300 transition-transform group-open:rotate-45"></i>
-                    </summary>
-                    <div class="p-8 pt-0 fade-in-text">
-                        <div class="bg-white p-4 border border-stone-200 mb-4 space-y-3">
-                            <p class="text-[9px] uppercase font-bold text-stone-400 tracking-widest border-b pb-2 mb-2">Ficha de Salud:</p>
-                            <label class="flex items-center gap-3 cursor-pointer"><input type="checkbox" id="imp-luc-flex" class="w-4 h-4 accent-stone-900"><span class="text-[10px] font-bold uppercase">Impedimento físico</span></label>
-                            <label class="flex items-center gap-3 cursor-pointer"><input type="checkbox" id="rec-luc-flex" class="w-4 h-4 accent-stone-900"><span class="text-[10px] font-bold uppercase">Recomendación médica</span></label>
-                        </div>
+                <div class="bg-stone-50 border-t-4 border-stone-900 shadow-sm p-8 flex flex-col group transition-all duration-500 hover:shadow-xl cursor-default relative overflow-hidden">
+                    <h3 class="text-xl font-bold mb-1 italic">FLEX + ESFERO</h3>
+                    <p class="text-stone-400 text-[10px] uppercase font-bold mb-2 tracking-widest italic">Profe Luciana</p>
+                    <p class="text-stone-600 text-sm font-bold italic">Martes y Jueves • 14:00 HS</p>
+                    
+                    <div class="max-h-0 opacity-0 overflow-hidden group-hover:max-h-[500px] group-hover:opacity-100 group-hover:mt-6 transition-all duration-500 ease-in-out">
+                        <p class="text-[9px] uppercase font-bold text-stone-400 tracking-widest mb-4 border-b pb-2">Seleccioná tu Plan:</p>
                         <div class="grid grid-cols-2 gap-2">
-                            <button onclick="enviarInscripcion('Flex + Esfero (14hs)', 'Prueba', 18000, 'imp-luc-flex', 'rec-luc-flex')" class="bg-white border border-stone-200 py-3 text-[8px] font-bold uppercase hover:bg-stone-100 transition">Prueba $18.000</button>
-                            <button onclick="enviarInscripcion('Flex + Esfero (14hs)', 'Mensual 1x', 48000, 'imp-luc-flex', 'rec-luc-flex')" class="bg-stone-100 border border-stone-200 py-3 text-[8px] font-bold uppercase hover:bg-stone-200 transition">Plan 1x $48.000</button>
-                            <button onclick="enviarInscripcion('Flex + Esfero (14hs)', 'Mensual 2x', 62000, 'imp-luc-flex', 'rec-luc-flex')" class="bg-stone-900 text-white py-3 text-[8px] font-bold uppercase hover:bg-stone-700 transition col-span-2 italic">Asegurar Cupo (2x) $62.000</button>
-                            <button onclick="enviarInscripcion('Flex + Esfero (14hs)', 'Mensual 3x', 84000, 'imp-luc-flex', 'rec-luc-flex')" class="bg-white border border-stone-800 py-3 text-[8px] font-bold uppercase hover:bg-stone-900 hover:text-white transition col-span-2 italic">Plan Maestro (3x) $84.000</button>
+                            <a href="https://wa.me/541176194825?text=Hola%20Gast%C3%B3n!%20Quiero%20reservar%20una%20*CLASE%20DE%20PRUEBA*%20de%20Flex%20(14hs)%20-%20$18.000" class="bg-white border border-stone-200 py-3 text-[8px] font-bold uppercase hover:bg-stone-100 transition text-center">Prueba $18.000</a>
+                            <a href="https://wa.me/541176194825?text=Hola%20Gast%C3%B3n!%20Deseo%20inscribirme%20al%20*PLAN%201X*%20de%20Flex%20(14hs)%20-%20$48.000" class="bg-stone-100 border border-stone-200 py-3 text-[8px] font-bold uppercase hover:bg-stone-200 transition text-center">Plan 1x $48.000</a>
+                            <a href="https://wa.me/541176194825?text=Hola%20Gast%C3%B3n!%20Deseo%20asegurar%20mi%20cupo%20en%20el%20*PLAN%20EQUILIBRIO%202X*%20de%20Flex%20(14hs)%20-%20$62.000" class="bg-stone-900 text-white py-3 text-[8px] font-bold uppercase hover:bg-stone-700 transition col-span-2 text-center">Asegurar Cupo (2x) $62.000</a>
+                            <a href="https://wa.me/541176194825?text=Hola%20Gast%C3%B3n!%20Deseo%20inscribirme%20al%20*PLAN%20MAESTRO%203X*%20de%20Flex%20(14hs)%20-%20$84.000" class="bg-white border border-stone-800 py-3 text-[8px] font-bold uppercase hover:bg-stone-900 hover:text-white transition col-span-2 text-center">Plan Maestro (3x) $84.000</a>
                         </div>
                     </div>
-                </details>
+                </div>
 
-                <details class="clase-accordion group bg-stone-50 border-t-4 border-stone-900 shadow-sm overflow-hidden transition-all duration-300">
-                    <summary class="p-8 cursor-pointer list-none flex flex-col relative outline-none">
-                        <h3 class="text-xl font-bold mb-1 italic">HATHA Y MEDITACIÓN</h3>
-                        <p class="text-stone-400 text-[10px] uppercase font-bold mb-2 tracking-widest italic">Profe Belén</p>
-                        <p class="text-stone-600 text-sm font-bold italic">Martes y Jueves • 18:00 HS</p>
-                        <i class="fas fa-plus absolute bottom-4 right-4 text-stone-300 transition-transform group-open:rotate-45"></i>
-                    </summary>
-                    <div class="p-8 pt-0 fade-in-text">
-                        <div class="bg-white p-4 border border-stone-200 mb-4 space-y-3">
-                            <p class="text-[9px] uppercase font-bold text-stone-400 tracking-widest border-b pb-2 mb-2">Ficha de Salud:</p>
-                            <label class="flex items-center gap-3 cursor-pointer"><input type="checkbox" id="imp-bel" class="w-4 h-4 accent-stone-900"><span class="text-[10px] font-bold uppercase">Impedimento físico</span></label>
-                            <label class="flex items-center gap-3 cursor-pointer"><input type="checkbox" id="rec-bel" class="w-4 h-4 accent-stone-900"><span class="text-[10px] font-bold uppercase">Recomendación médica</span></label>
-                        </div>
+                <div class="bg-stone-50 border-t-4 border-stone-900 shadow-sm p-8 flex flex-col group transition-all duration-500 hover:shadow-xl cursor-default relative overflow-hidden">
+                    <h3 class="text-xl font-bold mb-1 italic">HATHA Y MEDITACIÓN</h3>
+                    <p class="text-stone-400 text-[10px] uppercase font-bold mb-2 tracking-widest italic">Profe Belén</p>
+                    <p class="text-stone-600 text-sm font-bold italic">Martes y Jueves • 18:00 HS</p>
+                    
+                    <div class="max-h-0 opacity-0 overflow-hidden group-hover:max-h-[500px] group-hover:opacity-100 group-hover:mt-6 transition-all duration-500 ease-in-out">
+                        <p class="text-[9px] uppercase font-bold text-stone-400 tracking-widest mb-4 border-b pb-2">Seleccioná tu Plan:</p>
                         <div class="grid grid-cols-2 gap-2">
-                            <button onclick="enviarInscripcion('Hatha y Meditación (18hs)', 'Prueba', 18000, 'imp-bel', 'rec-bel')" class="bg-white border border-stone-200 py-3 text-[8px] font-bold uppercase hover:bg-stone-100 transition">Prueba $18.000</button>
-                            <button onclick="enviarInscripcion('Hatha y Meditación (18hs)', 'Mensual 1x', 48000, 'imp-bel', 'rec-bel')" class="bg-stone-100 border border-stone-200 py-3 text-[8px] font-bold uppercase hover:bg-stone-200 transition">Plan 1x $48.000</button>
-                            <button onclick="enviarInscripcion('Hatha y Meditación (18hs)', 'Mensual 2x', 62000, 'imp-bel', 'rec-bel')" class="bg-stone-900 text-white py-3 text-[8px] font-bold uppercase hover:bg-stone-700 transition col-span-2 italic">Asegurar Cupo (2x) $62.000</button>
-                            <button onclick="enviarInscripcion('Hatha y Meditación (18hs)', 'Mensual 3x', 84000, 'imp-bel', 'rec-bel')" class="bg-white border border-stone-800 py-3 text-[8px] font-bold uppercase hover:bg-stone-900 hover:text-white transition col-span-2 italic">Plan Maestro (3x) $84.000</button>
+                            <a href="https://wa.me/541176194825?text=Hola%20Gast%C3%B3n!%20Quiero%20reservar%20una%20*CLASE%20DE%20PRUEBA*%20de%20Hatha/Meditaci%C3%B3n%20(18hs)%20-%20$18.000" class="bg-white border border-stone-200 py-3 text-[8px] font-bold uppercase hover:bg-stone-100 transition text-center">Prueba $18.000</a>
+                            <a href="https://wa.me/541176194825?text=Hola%20Gast%C3%B3n!%20Deseo%20inscribirme%20al%20*PLAN%201X*%20de%20Hatha/Meditaci%C3%B3n%20(18hs)%20-%20$48.000" class="bg-stone-100 border border-stone-200 py-3 text-[8px] font-bold uppercase hover:bg-stone-200 transition text-center">Plan 1x $48.000</a>
+                            <a href="https://wa.me/541176194825?text=Hola%20Gast%C3%B3n!%20Deseo%20asegurar%20mi%20cupo%20en%20el%20*PLAN%20EQUILIBRIO%202X*%20de%20Hatha/Meditaci%C3%B3n%20(18hs)%20-%20$62.000" class="bg-stone-900 text-white py-3 text-[8px] font-bold uppercase hover:bg-stone-700 transition col-span-2 text-center">Asegurar Cupo (2x) $62.000</a>
+                            <a href="https://wa.me/541176194825?text=Hola%20Gast%C3%B3n!%20Deseo%20inscribirme%20al%20*PLAN%20MAESTRO%203X*%20de%20Hatha/Meditaci%C3%B3n%20(18hs)%20-%20$84.000" class="bg-white border border-stone-800 py-3 text-[8px] font-bold uppercase hover:bg-stone-900 hover:text-white transition col-span-2 text-center">Plan Maestro (3x) $84.000</a>
                         </div>
                     </div>
-                </details>
+                </div>
 
-                <details class="clase-accordion group bg-stone-50 border-t-4 border-stone-900 shadow-sm overflow-hidden transition-all duration-300">
-                    <summary class="p-8 cursor-pointer list-none flex flex-col relative outline-none">
-                        <h3 class="text-xl font-bold mb-1 italic">YOGA TERAPEUTICO</h3>
-                        <p class="text-stone-400 text-[10px] uppercase font-bold mb-2 tracking-widest italic">Profe Estefy</p>
-                        <p class="text-stone-600 text-sm font-bold italic">Lunes y Viernes • 19:15 HS</p>
-                        <i class="fas fa-plus absolute bottom-4 right-4 text-stone-300 transition-transform group-open:rotate-45"></i>
-                    </summary>
-                    <div class="p-8 pt-0 fade-in-text">
-                        <div class="bg-white p-4 border border-stone-200 mb-4 space-y-3">
-                            <p class="text-[9px] uppercase font-bold text-stone-400 tracking-widest border-b pb-2 mb-2">Ficha de Salud:</p>
-                            <label class="flex items-center gap-3 cursor-pointer"><input type="checkbox" id="imp-est" class="w-4 h-4 accent-stone-900"><span class="text-[10px] font-bold uppercase">Impedimento físico</span></label>
-                            <label class="flex items-center gap-3 cursor-pointer"><input type="checkbox" id="rec-est" class="w-4 h-4 accent-stone-900"><span class="text-[10px] font-bold uppercase">Recomendación médica</span></label>
-                        </div>
+                <div class="bg-stone-50 border-t-4 border-stone-900 shadow-sm p-8 flex flex-col group transition-all duration-500 hover:shadow-xl cursor-default relative overflow-hidden">
+                    <h3 class="text-xl font-bold mb-1 italic">YOGA TERAPEUTICO</h3>
+                    <p class="text-stone-400 text-[10px] uppercase font-bold mb-2 tracking-widest italic">Profe Estefy</p>
+                    <p class="text-stone-600 text-sm font-bold italic">Lunes y Viernes • 19:15 HS</p>
+                    
+                    <div class="max-h-0 opacity-0 overflow-hidden group-hover:max-h-[500px] group-hover:opacity-100 group-hover:mt-6 transition-all duration-500 ease-in-out">
+                        <p class="text-[9px] uppercase font-bold text-stone-400 tracking-widest mb-4 border-b pb-2">Seleccioná tu Plan:</p>
                         <div class="grid grid-cols-2 gap-2">
-                            <button onclick="enviarInscripcion('Yoga Terapéutico (19:15hs)', 'Prueba', 18000, 'imp-est', 'rec-est')" class="bg-white border border-stone-200 py-3 text-[8px] font-bold uppercase hover:bg-stone-100 transition">Prueba $18.000</button>
-                            <button onclick="enviarInscripcion('Yoga Terapéutico (19:15hs)', 'Mensual 1x', 48000, 'imp-est', 'rec-est')" class="bg-stone-100 border border-stone-200 py-3 text-[8px] font-bold uppercase hover:bg-stone-200 transition">Plan 1x $48.000</button>
-                            <button onclick="enviarInscripcion('Yoga Terapéutico (19:15hs)', 'Mensual 2x', 62000, 'imp-est', 'rec-est')" class="bg-stone-900 text-white py-3 text-[8px] font-bold uppercase hover:bg-stone-700 transition col-span-2 italic">Asegurar Cupo (2x) $62.000</button>
-                            <button onclick="enviarInscripcion('Yoga Terapéutico (19:15hs)', 'Mensual 3x', 84000, 'imp-est', 'rec-est')" class="bg-white border border-stone-800 py-3 text-[8px] font-bold uppercase hover:bg-stone-900 hover:text-white transition col-span-2 italic">Plan Maestro (3x) $84.000</button>
+                            <a href="https://wa.me/541176194825?text=Hola%20Gast%C3%B3n!%20Quiero%20reservar%20una%20*CLASE%20DE%20PRUEBA*%20de%20Yoga%20Terap%C3%A9utico%20(19:15hs)%20-%20$18.000" class="bg-white border border-stone-200 py-3 text-[8px] font-bold uppercase hover:bg-stone-100 transition text-center">Prueba $18.000</a>
+                            <a href="https://wa.me/541176194825?text=Hola%20Gast%C3%B3n!%20Deseo%20inscribirme%20al%20*PLAN%201X*%20de%20Yoga%20Terap%C3%A9utico%20(19:15hs)%20-%20$48.000" class="bg-stone-100 border border-stone-200 py-3 text-[8px] font-bold uppercase hover:bg-stone-200 transition text-center">Plan 1x $48.000</a>
+                            <a href="https://wa.me/541176194825?text=Hola%20Gast%C3%B3n!%20Deseo%20asegurar%20mi%20cupo%20en%20el%20*PLAN%20EQUILIBRIO%202X*%20de%20Yoga%20Terap%C3%A9utico%20(19:15hs)%20-%20$62.000" class="bg-stone-900 text-white py-3 text-[8px] font-bold uppercase hover:bg-stone-700 transition col-span-2 text-center">Asegurar Cupo (2x) $62.000</a>
+                            <a href="https://wa.me/541176194825?text=Hola%20Gast%C3%B3n!%20Deseo%20inscribirme%20al%20*PLAN%20MAESTRO%203X*%20de%20Yoga%20Terap%C3%A9utico%20(19:15hs)%20-%20$84.000" class="bg-white border border-stone-800 py-3 text-[8px] font-bold uppercase hover:bg-stone-900 hover:text-white transition col-span-2 text-center">Plan Maestro (3x) $84.000</a>
                         </div>
                     </div>
-                </details>
+                </div>
 
-                <details class="clase-accordion group bg-stone-50 border-t-4 border-stone-900 shadow-sm overflow-hidden transition-all duration-300">
-                    <summary class="p-8 cursor-pointer list-none flex flex-col relative outline-none">
-                        <h3 class="text-xl font-bold mb-1 italic">CÁPSULA DE MOVIMIENTO</h3>
-                        <p class="text-stone-400 text-[10px] uppercase font-bold mb-2 tracking-widest italic">Profe Luciana</p>
-                        <p class="text-stone-600 text-sm font-bold italic">Lunes • 10:00 HS</p>
-                        <i class="fas fa-plus absolute bottom-4 right-4 text-stone-300 transition-transform group-open:rotate-45"></i>
-                    </summary>
-                    <div class="p-8 pt-0 fade-in-text">
-                        <div class="bg-white p-4 border border-stone-200 mb-4 space-y-3">
-                            <p class="text-[9px] uppercase font-bold text-stone-400 tracking-widest border-b pb-2 mb-2">Ficha de Salud:</p>
-                            <label class="flex items-center gap-3 cursor-pointer"><input type="checkbox" id="imp-luc-cap" class="w-4 h-4 accent-stone-900"><span class="text-[10px] font-bold uppercase">Impedimento físico</span></label>
-                            <label class="flex items-center gap-3 cursor-pointer"><input type="checkbox" id="rec-luc-cap" class="w-4 h-4 accent-stone-900"><span class="text-[10px] font-bold uppercase">Recomendación médica</span></label>
-                        </div>
+                <div class="bg-stone-50 border-t-4 border-stone-900 shadow-sm p-8 flex flex-col group transition-all duration-500 hover:shadow-xl cursor-default relative overflow-hidden">
+                    <h3 class="text-xl font-bold mb-1 italic">CÁPSULA DE MOVIMIENTO</h3>
+                    <p class="text-stone-400 text-[10px] uppercase font-bold mb-2 tracking-widest italic">Profe Luciana</p>
+                    <p class="text-stone-600 text-sm font-bold italic">Lunes • 10:00 HS</p>
+                    
+                    <div class="max-h-0 opacity-0 overflow-hidden group-hover:max-h-[500px] group-hover:opacity-100 group-hover:mt-6 transition-all duration-500 ease-in-out">
+                        <p class="text-[9px] uppercase font-bold text-stone-400 tracking-widest mb-4 border-b pb-2">Seleccioná tu Plan:</p>
                         <div class="grid grid-cols-2 gap-2">
-                            <button onclick="enviarInscripcion('Cápsula de Movimiento (10hs)', 'Prueba', 18000, 'imp-luc-cap', 'rec-luc-cap')" class="bg-white border border-stone-200 py-3 text-[8px] font-bold uppercase hover:bg-stone-100 transition">Prueba $18.000</button>
-                            <button onclick="enviarInscripcion('Cápsula de Movimiento (10hs)', 'Mensual 1x', 48000, 'imp-luc-cap', 'rec-luc-cap')" class="bg-stone-100 border border-stone-200 py-3 text-[8px] font-bold uppercase hover:bg-stone-200 transition">Plan 1x $48.000</button>
-                            <button onclick="enviarInscripcion('Cápsula de Movimiento (10hs)', 'Mensual 2x', 62000, 'imp-luc-cap', 'rec-luc-cap')" class="bg-stone-900 text-white py-3 text-[8px] font-bold uppercase hover:bg-stone-700 transition col-span-2 italic">Asegurar Cupo (2x) $62.000</button>
-                            <button onclick="enviarInscripcion('Cápsula de Movimiento (10hs)', 'Mensual 3x', 84000, 'imp-luc-cap', 'rec-luc-cap')" class="bg-white border border-stone-800 py-3 text-[8px] font-bold uppercase hover:bg-stone-900 hover:text-white transition col-span-2 italic">Plan Maestro (3x) $84.000</button>
+                            <a href="https://wa.me/541176194825?text=Hola%20Gast%C3%B3n!%20Quiero%20reservar%20una%20*CLASE%20DE%20PRUEBA*%20de%20C%C3%A1psula%20(10hs)%20-%20$18.000" class="bg-white border border-stone-200 py-3 text-[8px] font-bold uppercase hover:bg-stone-100 transition text-center">Prueba $18.000</a>
+                            <a href="https://wa.me/541176194825?text=Hola%20Gast%C3%B3n!%20Deseo%20inscribirme%20al%20*PLAN%201X*%20de%20C%C3%A1psula%20(10hs)%20-%20$48.000" class="bg-stone-100 border border-stone-200 py-3 text-[8px] font-bold uppercase hover:bg-stone-200 transition text-center">Plan 1x $48.000</a>
+                            <a href="https://wa.me/541176194825?text=Hola%20Gast%C3%B3n!%20Deseo%20asegurar%20mi%20cupo%20en%20el%20*PLAN%20EQUILIBRIO%202X*%20de%20C%C3%A1psula%20(10hs)%20-%20$62.000" class="bg-stone-900 text-white py-3 text-[8px] font-bold uppercase hover:bg-stone-700 transition col-span-2 text-center">Asegurar Cupo (2x) $62.000</a>
+                            <a href="https://wa.me/541176194825?text=Hola%20Gast%C3%B3n!%20Deseo%20inscribirme%20al%20*PLAN%20MAESTRO%203X*%20de%20C%C3%A1psula%20(10hs)%20-%20$84.000" class="bg-white border border-stone-800 py-3 text-[8px] font-bold uppercase hover:bg-stone-900 hover:text-white transition col-span-2 text-center">Plan Maestro (3x) $84.000</a>
                         </div>
                     </div>
-                </details>
+                </div>
 
             </div>
     </section>
