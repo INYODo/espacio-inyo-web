@@ -3,57 +3,85 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flyer Pase Global de Winter</title>
+    <title>Flyer Pase Global de Invierno 🔥</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Lato:wght@400;900&display=swap" rel="stylesheet">
     <style>
         .brand-font { font-family: 'Oswald', sans-serif; text-transform: uppercase; }
-        body { font-family: 'Lato', sans-serif; }
+        .body-font { font-family: 'Lato', sans-serif; }
+        
+        /* Animación de pulso de fuego para el botón de acción */
+        @keyframes fire-glow {
+            0% { box-shadow: 0 0 0 0 rgba(185, 28, 28, 0.5); border-color: rgba(185, 28, 28, 0.6); }
+            50% { box-shadow: 0 0 25px 6px rgba(185, 28, 28, 0.3); border-color: rgba(220, 38, 38, 1); }
+            100% { box-shadow: 0 0 0 0 rgba(185, 28, 28, 0.5); border-color: rgba(185, 28, 28, 0.6); }
+        }
+        .animate-fire { animation: fire-glow 2.5s infinite ease-in-out; }
     </style>
 </head>
-<body class="bg-stone-950 flex items-center justify-center min-h-screen p-4">
+<body class="bg-stone-950 flex items-center justify-center min-h-screen p-4 body-font">
 
-    <!-- CONTENEDOR CUADRADO PERFECTO (1:1) PARA WHATSAPP / INSTAGRAM -->
-    <div class="w-[500px] h-[500px] bg-[#0c0a09] border-2 border-[#8a744d]/30 p-10 flex flex-col justify-between relative overflow-hidden shadow-2xl select-none">
+    <!-- CONTENEDOR 1:1 REFORZADO CON ENERGÍA MARCIAL -->
+    <div class="w-[500px] h-[500px] bg-gradient-to-br from-red-950/20 via-stone-950 to-black border-2 border-red-900/30 p-10 flex flex-col justify-between relative overflow-hidden shadow-2xl select-none">
         
-        <!-- Efecto Neblina de Fondo -->
-        <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(138,116,77,0.03)_0%,transparent_70%)] pointer-events-none"></div>
+        <!-- Textura de Imagen del Dojo de fondo (Imagen Viva) -->
+        <div class="absolute inset-0 bg-cover bg-center opacity-10 mix-blend-overlay" style="background-image: url('imagen/kiryu-dojo.JPEG');"></div>
+        
+        <!-- Viñeta de oscuridad perimetral -->
+        <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_30%,#0c0a09_100%)] pointer-events-none"></div>
 
-        <!-- Encabezado -->
-        <div class="text-center z-10">
-            <p class="text-[#8a744d] text-[10px] tracking-[0.6em] font-bold uppercase italic mb-2">Espacio INYO ☯️</p>
-            <div class="w-12 h-px bg-[#8a744d]/40 mx-auto"></div>
+        <!-- Badge de Urgencia Flotante -->
+        <div class="absolute top-6 right-6 z-20">
+            <span class="bg-red-900/80 backdrop-blur-md text-white text-[8px] font-black tracking-[0.2em] uppercase px-3 py-1 rounded-sm border border-red-700/50 italic">
+                🔥 ÚLTIMOS CUPOS
+            </span>
         </div>
 
-        <!-- Contenido Central -->
-        <div class="text-center my-auto z-10 space-y-4">
-            <h1 class="brand-font text-white text-4xl font-bold tracking-wider leading-none italic">
-                Pase Global<br>
-                <span class="text-[#8a744d]">de Invierno</span>
+        <!-- Encabezado con Actitud -->
+        <div class="text-left z-10">
+            <p class="text-red-600 text-[10px] tracking-[0.5em] font-black uppercase italic mb-1">ESPACIO INYO ☯️</p>
+            <p class="text-stone-500 text-[9px] tracking-widest uppercase font-bold">El invierno no te frena</p>
+        </div>
+
+        <!-- Bloque Central de Venta Agresiva -->
+        <div class="my-auto z-10 space-y-4 relative">
+            <h1 class="brand-font text-white text-5xl font-black tracking-tight leading-none italic uppercase">
+                ¿VAS A HIBERNAR<br>
+                <span class="text-red-700">O A ENTRENAR?</span>
             </h1>
             
-            <div class="text-3xl font-light tracking-widest text-stone-200 brand-font pt-2">
-                $160.000 <span class="text-xs text-stone-500 lowercase">/ mes</span>
+            <p class="text-stone-400 text-xs italic font-medium max-w-sm leading-relaxed">
+                No cortes tu evolución por el frío. Un único pase para forjar un cuerpo de acero y una mente inquebrantable.
+            </p>
+            
+            <!-- Contenedor de Precio Impactante -->
+            <div class="inline-block bg-stone-900/60 border border-white/5 px-6 py-2 rounded-sm backdrop-blur-sm">
+                <div class="text-3xl font-black tracking-wider text-white brand-font italic">
+                    $160.000 <span class="text-xs text-red-500 tracking-normal font-bold lowercase">/ pase libre total</span>
+                </div>
             </div>
 
-            <!-- Disciplinas -->
-            <div class="pt-4 flex flex-wrap justify-center gap-x-4 gap-y-2 text-stone-400 text-[11px] uppercase tracking-widest font-semibold italic">
-                <span><i class="fas fa-circle text-[6px] text-[#8a744d] mr-1.5 align-middle"></i>Yoga</span>
-                <span><i class="fas fa-circle text-[6px] text-[#8a744d] mr-1.5 align-middle"></i>Calistenia</span>
-                <span><i class="fas fa-circle text-[6px] text-[#8a744d] mr-1.5 align-middle"></i>Zen Stretching</span>
-                <span><i class="fas fa-circle text-[6px] text-[#8a744d] mr-1.5 align-middle"></i>Bujinkan</span>
+            <!-- Disciplinas con Checkmarks de Poder -->
+            <div class="pt-2 flex flex-wrap gap-x-5 gap-y-2 text-stone-300 text-[10px] uppercase tracking-widest font-black italic">
+                <span><i class="fas fa-bolt text-red-600 mr-1.5"></i>Calistenia</span>
+                <span><i class="fas fa-fire text-red-600 mr-1.5"></i>Bujinkan</span>
+                <span><i class="fas fa-yin-yang text-red-600 mr-1.5"></i>Zen Stretching</span>
+                <span><i class="fas fa-spa text-red-600 mr-1.5"></i>Yoga</span>
             </div>
         </div>
 
-        <!-- Pie del Flyer -->
-        <div class="text-center z-10 space-y-3">
-            <p class="text-[9px] text-stone-500 uppercase tracking-[0.3em] font-medium">
-                Sede Lanús Oeste Centro • Cupos Limitados
-            </p>
-            <div class="inline-block bg-white/5 border border-stone-800 text-stone-300 px-6 py-2 rounded-sm text-[9px] font-bold uppercase tracking-widest">
-                <i class="fab fa-whatsapp mr-2 text-emerald-500"></i> Solicitar Membresía
+        <!-- Footer con Llamado a la Acción Directo -->
+        <div class="flex items-end justify-between border-t border-white/5 pt-6 z-10">
+            <div class="text-left">
+                <p class="text-[9px] text-stone-400 font-bold uppercase tracking-wider">Sede Lanús Oeste Centro</p>
+                <p class="text-[8px] text-stone-600 uppercase tracking-widest mt-0.5">Clases con Gastón y Belén</p>
             </div>
+            
+            <!-- Botón con Animación de Brasa Viva -->
+            <a href="#" class="animate-fire bg-red-950 text-white border border-red-700 px-5 py-2.5 rounded-sm text-[9px] font-black uppercase tracking-widest hover:bg-red-900 transition shadow-lg flex items-center gap-2 italic">
+                <i class="fab fa-whatsapp text-emerald-400 text-xs animate-bounce"></i> Mandá un WhatsApp ya
+            </a>
         </div>
 
     </div>
