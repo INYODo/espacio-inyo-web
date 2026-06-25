@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flyer Pase Global de Winter</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        .brand-font { font-family: 'Oswald', sans-serif; text-transform: uppercase; }
+        body { font-family: 'Lato', sans-serif; }
+    </style>
+</head>
+<body class="bg-stone-950 flex items-center justify-center min-h-screen p-4">
+
+    <!-- CONTENEDOR CUADRADO PERFECTO (1:1) PARA WHATSAPP / INSTAGRAM -->
+    <div class="w-[500px] h-[500px] bg-[#0c0a09] border-2 border-[#8a744d]/30 p-10 flex flex-col justify-between relative overflow-hidden shadow-2xl select-none">
+        
+        <!-- Efecto Neblina de Fondo -->
+        <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(138,116,77,0.03)_0%,transparent_70%)] pointer-events-none"></div>
+
+        <!-- Encabezado -->
+        <div class="text-center z-10">
+            <p class="text-[#8a744d] text-[10px] tracking-[0.6em] font-bold uppercase italic mb-2">Espacio INYO ☯️</p>
+            <div class="w-12 h-px bg-[#8a744d]/40 mx-auto"></div>
+        </div>
+
+        <!-- Contenido Central -->
+        <div class="text-center my-auto z-10 space-y-4">
+            <h1 class="brand-font text-white text-4xl font-bold tracking-wider leading-none italic">
+                Pase Global<br>
+                <span class="text-[#8a744d]">de Invierno</span>
+            </h1>
+            
+            <div class="text-3xl font-light tracking-widest text-stone-200 brand-font pt-2">
+                $160.000 <span class="text-xs text-stone-500 lowercase">/ mes</span>
+            </div>
+
+            <!-- Disciplinas -->
+            <div class="pt-4 flex flex-wrap justify-center gap-x-4 gap-y-2 text-stone-400 text-[11px] uppercase tracking-widest font-semibold italic">
+                <span><i class="fas fa-circle text-[6px] text-[#8a744d] mr-1.5 align-middle"></i>Yoga</span>
+                <span><i class="fas fa-circle text-[6px] text-[#8a744d] mr-1.5 align-middle"></i>Calistenia</span>
+                <span><i class="fas fa-circle text-[6px] text-[#8a744d] mr-1.5 align-middle"></i>Zen Stretching</span>
+                <span><i class="fas fa-circle text-[6px] text-[#8a744d] mr-1.5 align-middle"></i>Bujinkan</span>
+            </div>
+        </div>
+
+        <!-- Pie del Flyer -->
+        <div class="text-center z-10 space-y-3">
+            <p class="text-[9px] text-stone-500 uppercase tracking-[0.3em] font-medium">
+                Sede Lanús Oeste Centro • Cupos Limitados
+            </p>
+            <div class="inline-block bg-white/5 border border-stone-800 text-stone-300 px-6 py-2 rounded-sm text-[9px] font-bold uppercase tracking-widest">
+                <i class="fab fa-whatsapp mr-2 text-emerald-500"></i> Solicitar Membresía
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>
