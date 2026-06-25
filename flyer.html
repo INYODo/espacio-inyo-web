@@ -3,84 +3,87 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flyer Pase Global de Invierno 🔥</title>
+    <title>Flyer Pase Global de Invierno ☯️</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Lato:wght@400;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
-        .brand-font { font-family: 'Oswald', sans-serif; text-transform: uppercase; }
+        .brand-font { font-family: 'Oswald', sans-serif; text-transform: uppercase; letter-spacing: 0.05em; }
         .body-font { font-family: 'Lato', sans-serif; }
         
-        /* Animación de pulso de fuego para el botón de acción */
-        @keyframes fire-glow {
-            0% { box-shadow: 0 0 0 0 rgba(185, 28, 28, 0.5); border-color: rgba(185, 28, 28, 0.6); }
-            50% { box-shadow: 0 0 25px 6px rgba(185, 28, 28, 0.3); border-color: rgba(220, 38, 38, 1); }
-            100% { box-shadow: 0 0 0 0 rgba(185, 28, 28, 0.5); border-color: rgba(185, 28, 28, 0.6); }
+        /* Resplandor cálido y sutil, emulando la energía interna */
+        @keyframes aura-cálida {
+            0% { box-shadow: 0 0 0 0 rgba(217, 119, 6, 0.1); border-color: rgba(217, 119, 6, 0.2); }
+            50% { box-shadow: 0 0 20px 4px rgba(217, 119, 6, 0.15); border-color: rgba(217, 119, 6, 0.5); }
+            100% { box-shadow: 0 0 0 0 rgba(217, 119, 6, 0.1); border-color: rgba(217, 119, 6, 0.2); }
         }
-        .animate-fire { animation: fire-glow 2.5s infinite ease-in-out; }
+        .animate-aura { animation: aura-cálida 4s infinite ease-in-out; }
     </style>
 </head>
-<body class="bg-stone-950 flex items-center justify-center min-h-screen p-4 body-font">
+<body class="bg-stone-950 flex items-center justify-center min-h-screen p-4 body-font text-stone-300">
 
-    <!-- CONTENEDOR 1:1 REFORZADO CON ENERGÍA MARCIAL -->
-    <div class="w-[500px] h-[500px] bg-gradient-to-br from-red-950/20 via-stone-950 to-black border-2 border-red-900/30 p-10 flex flex-col justify-between relative overflow-hidden shadow-2xl select-none">
+    <!-- CONTENEDOR 1:1 EN TORNO ÁMBAR Y PIEDRA CÁLIDA -->
+    <div class="w-[500px] h-[500px] bg-gradient-to-tr from-[#131110] via-[#1a1614] to-[#131110] border border-amber-900/20 p-10 flex flex-col justify-between relative overflow-hidden shadow-2xl select-none">
         
-        <!-- Textura de Imagen del Dojo de fondo (Imagen Viva) -->
-        <div class="absolute inset-0 bg-cover bg-center opacity-10 mix-blend-overlay" style="background-image: url('imagen/kiryu-dojo.JPEG');"></div>
+        <!-- Luz Ámbar de Fondo (Sensación de Refugio Calefaccionado) -->
+        <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(217,119,6,0.06)_0%,transparent_75%)] pointer-events-none"></div>
         
-        <!-- Viñeta de oscuridad perimetral -->
-        <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_30%,#0c0a09_100%)] pointer-events-none"></div>
+        <!-- Textura orgánica muy sutil de fondo -->
+        <div class="absolute inset-0 bg-cover bg-center opacity-5 mix-blend-overlay" style="background-image: url('imagen/kiryu-dojo.JPEG');"></div>
 
-        <!-- Badge de Urgencia Flotante -->
-        <div class="absolute top-6 right-6 z-20">
-            <span class="bg-red-900/80 backdrop-blur-md text-white text-[8px] font-black tracking-[0.2em] uppercase px-3 py-1 rounded-sm border border-red-700/50 italic">
-                🔥 ÚLTIMOS CUPOS
-            </span>
+        <!-- Encabezado Armonioso -->
+        <div class="text-center z-10">
+            <p class="text-amber-600/70 text-[10px] tracking-[0.5em] font-bold uppercase italic mb-1">ESPACIO INYO ☯️</p>
+            <p class="text-stone-500 text-[9px] tracking-widest uppercase italic font-light">Un espacio de bienestar para habitar tu cuerpo</p>
+            <div class="w-8 h-px bg-amber-900/30 mx-auto mt-2"></div>
         </div>
 
-        <!-- Encabezado con Actitud -->
-        <div class="text-left z-10">
-            <p class="text-red-600 text-[10px] tracking-[0.5em] font-black uppercase italic mb-1">ESPACIO INYO ☯️</p>
-            <p class="text-stone-500 text-[9px] tracking-widest uppercase font-bold">El invierno no te frena</p>
-        </div>
-
-        <!-- Bloque Central de Venta Agresiva -->
-        <div class="my-auto z-10 space-y-4 relative">
-            <h1 class="brand-font text-white text-5xl font-black tracking-tight leading-none italic uppercase">
-                ¿VAS A HIBERNAR<br>
-                <span class="text-red-700">O A ENTRENAR?</span>
+        <!-- Bloque de Contenido Cálido y Reconciliador -->
+        <div class="my-auto z-10 text-center space-y-5">
+            <h1 class="brand-font text-white text-4xl font-normal tracking-wide leading-tight italic">
+                Tu Refugio <span class="text-amber-500/90">este Invierno</span>
             </h1>
             
-            <p class="text-stone-400 text-xs italic font-medium max-w-sm leading-relaxed">
-                No cortes tu evolución por el frío. Un único pase para forjar un cuerpo de acero y una mente inquebrantable.
+            <p class="text-stone-400 text-xs italic font-light max-w-sm mx-auto leading-relaxed">
+                Sabemos que el frío invita al desgano. Te proponemos un espacio amable para recuperar tu energía vital y bienestar a través de un enfoque integral.
             </p>
-            
-            <!-- Contenedor de Precio Impactante -->
-            <div class="inline-block bg-stone-900/60 border border-white/5 px-6 py-2 rounded-sm backdrop-blur-sm">
-                <div class="text-3xl font-black tracking-wider text-white brand-font italic">
-                    $160.000 <span class="text-xs text-red-500 tracking-normal font-bold lowercase">/ pase libre total</span>
+
+            <!-- Grilla de Atributos del Ecosistema -->
+            <div class="grid grid-cols-2 gap-x-4 gap-y-3 max-w-xs mx-auto text-left text-[11px] text-stone-300 italic font-light border-y border-stone-800/60 py-4 my-2">
+                <div class="flex items-center gap-2">
+                    <i class="fas fa-yin-yang text-amber-600/60 text-[9px]"></i>
+                    <span>Capacidad articular</span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <i class="fas fa-heart text-amber-600/60 text-[9px]"></i>
+                    <span>Movimientos controlados</span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <i class="fas fa-spa text-amber-600/60 text-[9px]"></i>
+                    <span>Relajación y meditación</span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <i class="fas fa-leaf text-amber-600/60 text-[9px]"></i>
+                    <span>Fortaleza & recuperación</span>
                 </div>
             </div>
-
-            <!-- Disciplinas con Checkmarks de Poder -->
-            <div class="pt-2 flex flex-wrap gap-x-5 gap-y-2 text-stone-300 text-[10px] uppercase tracking-widest font-black italic">
-                <span><i class="fas fa-bolt text-red-600 mr-1.5"></i>Calistenia</span>
-                <span><i class="fas fa-fire text-red-600 mr-1.5"></i>Bujinkan</span>
-                <span><i class="fas fa-yin-yang text-red-600 mr-1.5"></i>Zen Stretching</span>
-                <span><i class="fas fa-spa text-red-600 mr-1.5"></i>Yoga</span>
+            
+            <!-- Propuesta de Valor Integrada -->
+            <div class="text-xs text-stone-400 tracking-widest uppercase brand-font font-light">
+                Membresía Global Única • <span class="text-white font-bold">$160.000</span>
             </div>
         </div>
 
-        <!-- Footer con Llamado a la Acción Directo -->
-        <div class="flex items-end justify-between border-t border-white/5 pt-6 z-10">
-            <div class="text-left">
-                <p class="text-[9px] text-stone-400 font-bold uppercase tracking-wider">Sede Lanús Oeste Centro</p>
-                <p class="text-[8px] text-stone-600 uppercase tracking-widest mt-0.5">Clases con Gastón y Belén</p>
+        <!-- Pie de Página Invitador -->
+        <div class="flex items-center justify-between border-t border-stone-900 pt-5 z-10">
+            <div class="text-left text-[9px] text-stone-500 tracking-wider uppercase font-light">
+                <p>Yoga • Calistenia</p>
+                <p class="mt-0.5">Zen Stretching • Bujinkan</p>
             </div>
             
-            <!-- Botón con Animación de Brasa Viva -->
-            <a href="#" class="animate-fire bg-red-950 text-white border border-red-700 px-5 py-2.5 rounded-sm text-[9px] font-black uppercase tracking-widest hover:bg-red-900 transition shadow-lg flex items-center gap-2 italic">
-                <i class="fab fa-whatsapp text-emerald-400 text-xs animate-bounce"></i> Mandá un WhatsApp ya
+            <!-- Botón Suave con Animación de Aura Interna -->
+            <a href="#" class="animate-aura bg-amber-950/20 text-amber-200/90 border border-amber-900/40 px-5 py-2.5 rounded-sm text-[9px] font-bold uppercase tracking-widest hover:bg-amber-900/20 transition flex items-center gap-2 italic">
+                <i class="far fa-comment-dots text-amber-500 text-xs"></i> Consultar cupos disponibles
             </a>
         </div>
 
